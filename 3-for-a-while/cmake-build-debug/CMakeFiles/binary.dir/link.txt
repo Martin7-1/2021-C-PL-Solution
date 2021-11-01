@@ -1,3 +1,0 @@
-"D:\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\binary.dir/objects.a
-C:\PROGRA~1\mingw64\bin\ar.exe cr CMakeFiles\binary.dir/objects.a @CMakeFiles\binary.dir\objects1.rsp
-C:\PROGRA~1\mingw64\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\binary.dir/objects.a -Wl,--no-whole-archive -o binary.exe -Wl,--out-implib,libbinary.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\binary.dir\linklibs.rsp

@@ -1,3 +1,0 @@
-"D:\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\sudoku.dir/objects.a
-C:\PROGRA~1\mingw64\bin\ar.exe cr CMakeFiles\sudoku.dir/objects.a @CMakeFiles\sudoku.dir\objects1.rsp
-C:\PROGRA~1\mingw64\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\sudoku.dir/objects.a -Wl,--no-whole-archive -o sudoku.exe -Wl,--out-implib,libsudoku.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\sudoku.dir\linklibs.rsp
