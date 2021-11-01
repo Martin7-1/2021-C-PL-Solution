@@ -1,4 +1,4 @@
-# Install script for directory: D:/C-PL/3-for-a-while
+# Install script for directory: D:/C-PL/2021-C-PL-Solution/3-for-a-while
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/C-PL/3-for-a-while/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/C-PL/2021-C-PL-Solution/3-for-a-while/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

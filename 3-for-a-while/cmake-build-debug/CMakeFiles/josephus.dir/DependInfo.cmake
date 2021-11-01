@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "D:/C-PL/3-for-a-while/josephus.c" "D:/C-PL/3-for-a-while/cmake-build-debug/CMakeFiles/josephus.dir/josephus.c.obj"
+  "D:/C-PL/2021-C-PL-Solution/3-for-a-while/josephus.c" "D:/C-PL/2021-C-PL-Solution/3-for-a-while/cmake-build-debug/CMakeFiles/josephus.dir/josephus.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
