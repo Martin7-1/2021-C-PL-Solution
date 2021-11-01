@@ -20,11 +20,9 @@ int main() {
     int size = n;
 
     // 循环 n - 1 次
-    for (int i = 0; i < n - 1; i++) {
+    for (int i = 0; i < n - 1; i++, index--, size--) {
         index = (index + k) % size;
         delete(arr, index, size);
-        index--;
-        size--;
     }
 
     printf("%d", arr[0]);
