@@ -1,0 +1,3 @@
+"D:\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\mines.dir/objects.a
+C:\PROGRA~1\mingw64\bin\ar.exe cr CMakeFiles\mines.dir/objects.a @CMakeFiles\mines.dir\objects1.rsp
+C:\PROGRA~1\mingw64\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\mines.dir/objects.a -Wl,--no-whole-archive -o mines.exe -Wl,--out-implib,libmines.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\mines.dir\linklibs.rsp

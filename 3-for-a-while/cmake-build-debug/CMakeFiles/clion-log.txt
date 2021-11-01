@@ -1,0 +1,4 @@
+"D:\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" D:\C-PL\2021-C-PL-Solution\3-for-a-while
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/C-PL/2021-C-PL-Solution/3-for-a-while/cmake-build-debug
