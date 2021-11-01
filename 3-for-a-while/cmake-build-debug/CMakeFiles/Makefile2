@@ -70,7 +70,6 @@ all: CMakeFiles/series.dir/all
 all: CMakeFiles/insertion-sort.dir/all
 all: CMakeFiles/mines.dir/all
 all: CMakeFiles/palindrome.dir/all
-all: CMakeFiles/add.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -86,7 +85,6 @@ clean: CMakeFiles/series.dir/clean
 clean: CMakeFiles/insertion-sort.dir/clean
 clean: CMakeFiles/mines.dir/clean
 clean: CMakeFiles/palindrome.dir/clean
-clean: CMakeFiles/add.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -96,7 +94,7 @@ clean: CMakeFiles/add.dir/clean
 CMakeFiles/josephus.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\josephus.dir\build.make CMakeFiles/josephus.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\josephus.dir\build.make CMakeFiles/josephus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=9,10 "Built target josephus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target josephus"
 .PHONY : CMakeFiles/josephus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -122,7 +120,7 @@ CMakeFiles/josephus.dir/clean:
 CMakeFiles/anotherMines.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\anotherMines.dir\build.make CMakeFiles/anotherMines.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\anotherMines.dir\build.make CMakeFiles/anotherMines.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target anotherMines"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target anotherMines"
 .PHONY : CMakeFiles/anotherMines.dir/all
 
 # Build rule for subdir invocation for target.
@@ -148,7 +146,7 @@ CMakeFiles/anotherMines.dir/clean:
 CMakeFiles/binary.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\binary.dir\build.make CMakeFiles/binary.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\binary.dir\build.make CMakeFiles/binary.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target binary"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target binary"
 .PHONY : CMakeFiles/binary.dir/all
 
 # Build rule for subdir invocation for target.
@@ -174,7 +172,7 @@ CMakeFiles/binary.dir/clean:
 CMakeFiles/sudoku.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=17,18 "Built target sudoku"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=15,16 "Built target sudoku"
 .PHONY : CMakeFiles/sudoku.dir/all
 
 # Build rule for subdir invocation for target.
@@ -200,7 +198,7 @@ CMakeFiles/sudoku.dir/clean:
 CMakeFiles/series.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\series.dir\build.make CMakeFiles/series.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\series.dir\build.make CMakeFiles/series.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=15,16 "Built target series"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=13,14 "Built target series"
 .PHONY : CMakeFiles/series.dir/all
 
 # Build rule for subdir invocation for target.
@@ -226,7 +224,7 @@ CMakeFiles/series.dir/clean:
 CMakeFiles/insertion-sort.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\insertion-sort.dir\build.make CMakeFiles/insertion-sort.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\insertion-sort.dir\build.make CMakeFiles/insertion-sort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target insertion-sort"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target insertion-sort"
 .PHONY : CMakeFiles/insertion-sort.dir/all
 
 # Build rule for subdir invocation for target.
@@ -252,7 +250,7 @@ CMakeFiles/insertion-sort.dir/clean:
 CMakeFiles/mines.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mines.dir\build.make CMakeFiles/mines.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mines.dir\build.make CMakeFiles/mines.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target mines"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=9,10 "Built target mines"
 .PHONY : CMakeFiles/mines.dir/all
 
 # Build rule for subdir invocation for target.
@@ -278,7 +276,7 @@ CMakeFiles/mines.dir/clean:
 CMakeFiles/palindrome.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\palindrome.dir\build.make CMakeFiles/palindrome.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\palindrome.dir\build.make CMakeFiles/palindrome.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=13,14 "Built target palindrome"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target palindrome"
 .PHONY : CMakeFiles/palindrome.dir/all
 
 # Build rule for subdir invocation for target.
@@ -296,32 +294,6 @@ palindrome: CMakeFiles/palindrome.dir/rule
 CMakeFiles/palindrome.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\palindrome.dir\build.make CMakeFiles/palindrome.dir/clean
 .PHONY : CMakeFiles/palindrome.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/add.dir
-
-# All Build rule for target.
-CMakeFiles/add.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target add"
-.PHONY : CMakeFiles/add.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/add.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/add.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\3-for-a-while\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/add.dir/rule
-
-# Convenience name for target.
-add: CMakeFiles/add.dir/rule
-.PHONY : add
-
-# clean rule for target.
-CMakeFiles/add.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/clean
-.PHONY : CMakeFiles/add.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

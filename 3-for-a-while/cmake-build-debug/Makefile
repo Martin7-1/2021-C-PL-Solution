@@ -219,43 +219,6 @@ palindrome/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\palindrome.dir\build.make CMakeFiles/palindrome.dir/build
 .PHONY : palindrome/fast
 
-#=============================================================================
-# Target rules for targets named add
-
-# Build rule for target.
-add: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 add
-.PHONY : add
-
-# fast build rule for target.
-add/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/build
-.PHONY : add/fast
-
-add.obj: add.c.obj
-.PHONY : add.obj
-
-# target to build an object file
-add.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/add.c.obj
-.PHONY : add.c.obj
-
-add.i: add.c.i
-.PHONY : add.i
-
-# target to preprocess a source file
-add.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/add.c.i
-.PHONY : add.c.i
-
-add.s: add.c.s
-.PHONY : add.s
-
-# target to generate assembly for a file
-add.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\add.dir\build.make CMakeFiles/add.dir/add.c.s
-.PHONY : add.c.s
-
 anotherMines.obj: anotherMines.c.obj
 .PHONY : anotherMines.obj
 
@@ -456,7 +419,6 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... add
 	@echo ... anotherMines
 	@echo ... binary
 	@echo ... insertion-sort
@@ -465,9 +427,6 @@ help:
 	@echo ... palindrome
 	@echo ... series
 	@echo ... sudoku
-	@echo ... add.obj
-	@echo ... add.i
-	@echo ... add.s
 	@echo ... anotherMines.obj
 	@echo ... anotherMines.i
 	@echo ... anotherMines.s

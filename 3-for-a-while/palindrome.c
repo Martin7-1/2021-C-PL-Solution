@@ -27,4 +27,8 @@ int main()
     }
 
     printf("%s", str);
+
+    // 释放内存
+    free(str);
+    return 0;
 }

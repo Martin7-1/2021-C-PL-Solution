@@ -25,6 +25,9 @@ int main()
         // [0, i)是已经排序好的
         insert(arr, insertValue, i);
     }
+
+    free(arr);
+    return 0;
 }
 
 void insert(int* arr, int insertValue, int size) {
