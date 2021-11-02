@@ -6,6 +6,7 @@ void delete(int* arr, int index, int size);
 int main() {
     int n;
     int k;
+    // 变长数组
     int* arr;
 
     scanf("%d %d", &n, &k);

@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-D:/C-PL/3-for-a-while/sudoku.c
+D:/C-PL/2021-C-PL-Solution/3-for-a-while/binary.c
 stdio.h
+-
+malloc.h
 -
 

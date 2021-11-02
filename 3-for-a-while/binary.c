@@ -6,30 +6,25 @@
 
 int main() {
     int n;
+    // 变长数组
     char* binaryNumber;
-    int* arr;
+
     scanf("%d", &n);
     binaryNumber = (char*) malloc(n * sizeof(char));
+    // %s是读入一个字符串，读入的数据会以'\0'结尾
     scanf("%s", binaryNumber);
 
-    arr = (int*) malloc(n * sizeof(n));
-    for (int i = 0; i < n; i++) {
-        if (binaryNumber[i] == '1') {
-            arr[i] = 1;
-        } else {
-            arr[i] = 0;
-        }
-    }
-
-    long long ans = 0;
+    int ans = 0;
     long long product = 1;
     for (int i = n - 1; i >= 0; i--) {
-        ans += arr[i] * product;
+        if (binaryNumber[i] == '1') {
+            ans += product;
+        }
         product *= 2;
     }
 
-    printf("%lld", ans);
-    free(arr);
+    printf("%d", ans);
+    free(binaryNumber);
 
     return 0;
 }
