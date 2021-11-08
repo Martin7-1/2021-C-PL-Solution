@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/C-PL/2021-C-PL-Solution/5-function/absolute-prime.c
+stdio.h
+-
+stdbool.h
+-
+math.h
+-
+

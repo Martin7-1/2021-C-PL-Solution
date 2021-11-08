@@ -1,0 +1,5 @@
+D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/CMakeFiles/sum.dir
+D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/CMakeFiles/absolute-prime.dir
+D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/CMakeFiles/radix.dir
+D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/CMakeFiles/rebuild_cache.dir
