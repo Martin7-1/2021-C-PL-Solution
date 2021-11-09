@@ -9,10 +9,11 @@ int getLength(const char* string);
 
 int main()
 {
-    char p[3], q[3], r[3];
+    char p[100], q[100], r[100];
     scanf("%s %s %s", p, q, r);
     bool isFindRadix = false;
 
+    // 笨蛋解法
     for (int x = 2; x <= 40; x++) {
         if (changeRadix(p, x) * changeRadix(q, x) == changeRadix(r, x)) {
             printf("%d", x);

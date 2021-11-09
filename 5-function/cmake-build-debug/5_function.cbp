@@ -27,6 +27,42 @@
 					<DistClean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="lcp">
+				<Option output="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/lcp.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 lcp"/>
+					<CompileFile command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lcp/fast">
+				<Option output="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/lcp.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 lcp/fast"/>
+					<CompileFile command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="sum">
 				<Option output="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/sum.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug"/>
@@ -58,6 +94,42 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 sum/fast"/>
+					<CompileFile command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="anotherRadix">
+				<Option output="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/anotherRadix.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 anotherRadix"/>
+					<CompileFile command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="anotherRadix/fast">
+				<Option output="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/anotherRadix.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 anotherRadix/fast"/>
 					<CompileFile command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -171,6 +243,42 @@
 					<DistClean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="magic-square">
+				<Option output="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/magic-square.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 magic-square"/>
+					<CompileFile command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="magic-square/fast">
+				<Option output="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/magic-square.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 magic-square/fast"/>
+					<CompileFile command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="D:/C-PL/2021-C-PL-Solution/5-function/cmake-build-debug"/>
 				<Option type="4"/>
@@ -184,6 +292,15 @@
 		</Build>
 		<Unit filename="D:/C-PL/2021-C-PL-Solution/5-function/absolute-prime.c">
 			<Option target="absolute-prime"/>
+		</Unit>
+		<Unit filename="D:/C-PL/2021-C-PL-Solution/5-function/anotherRadix.c">
+			<Option target="anotherRadix"/>
+		</Unit>
+		<Unit filename="D:/C-PL/2021-C-PL-Solution/5-function/lcp.c">
+			<Option target="lcp"/>
+		</Unit>
+		<Unit filename="D:/C-PL/2021-C-PL-Solution/5-function/magic-square.c">
+			<Option target="magic-square"/>
 		</Unit>
 		<Unit filename="D:/C-PL/2021-C-PL-Solution/5-function/next-permutation.c">
 			<Option target="next_permutation"/>

@@ -62,10 +62,13 @@ CMAKE_BINARY_DIR = D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/lcp.dir/all
 all: CMakeFiles/sum.dir/all
+all: CMakeFiles/anotherRadix.dir/all
 all: CMakeFiles/absolute-prime.dir/all
 all: CMakeFiles/radix.dir/all
 all: CMakeFiles/next_permutation.dir/all
+all: CMakeFiles/magic-square.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,11 +76,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/lcp.dir/clean
 clean: CMakeFiles/sum.dir/clean
+clean: CMakeFiles/anotherRadix.dir/clean
 clean: CMakeFiles/absolute-prime.dir/clean
 clean: CMakeFiles/radix.dir/clean
 clean: CMakeFiles/next_permutation.dir/clean
+clean: CMakeFiles/magic-square.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/lcp.dir
+
+# All Build rule for target.
+CMakeFiles/lcp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lcp.dir\build.make CMakeFiles/lcp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lcp.dir\build.make CMakeFiles/lcp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target lcp"
+.PHONY : CMakeFiles/lcp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/lcp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/lcp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/lcp.dir/rule
+
+# Convenience name for target.
+lcp: CMakeFiles/lcp.dir/rule
+.PHONY : lcp
+
+# clean rule for target.
+CMakeFiles/lcp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lcp.dir\build.make CMakeFiles/lcp.dir/clean
+.PHONY : CMakeFiles/lcp.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/sum.dir
@@ -86,7 +118,7 @@ clean: CMakeFiles/next_permutation.dir/clean
 CMakeFiles/sum.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sum.dir\build.make CMakeFiles/sum.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sum.dir\build.make CMakeFiles/sum.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target sum"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles --progress-num=13,14 "Built target sum"
 .PHONY : CMakeFiles/sum.dir/all
 
 # Build rule for subdir invocation for target.
@@ -104,6 +136,32 @@ sum: CMakeFiles/sum.dir/rule
 CMakeFiles/sum.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sum.dir\build.make CMakeFiles/sum.dir/clean
 .PHONY : CMakeFiles/sum.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/anotherRadix.dir
+
+# All Build rule for target.
+CMakeFiles/anotherRadix.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\anotherRadix.dir\build.make CMakeFiles/anotherRadix.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\anotherRadix.dir\build.make CMakeFiles/anotherRadix.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target anotherRadix"
+.PHONY : CMakeFiles/anotherRadix.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/anotherRadix.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/anotherRadix.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/anotherRadix.dir/rule
+
+# Convenience name for target.
+anotherRadix: CMakeFiles/anotherRadix.dir/rule
+.PHONY : anotherRadix
+
+# clean rule for target.
+CMakeFiles/anotherRadix.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\anotherRadix.dir\build.make CMakeFiles/anotherRadix.dir/clean
+.PHONY : CMakeFiles/anotherRadix.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/absolute-prime.dir
@@ -138,7 +196,7 @@ CMakeFiles/absolute-prime.dir/clean:
 CMakeFiles/radix.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\radix.dir\build.make CMakeFiles/radix.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\radix.dir\build.make CMakeFiles/radix.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target radix"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target radix"
 .PHONY : CMakeFiles/radix.dir/all
 
 # Build rule for subdir invocation for target.
@@ -164,7 +222,7 @@ CMakeFiles/radix.dir/clean:
 CMakeFiles/next_permutation.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\next_permutation.dir\build.make CMakeFiles/next_permutation.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\next_permutation.dir\build.make CMakeFiles/next_permutation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target next_permutation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles --progress-num=9,10 "Built target next_permutation"
 .PHONY : CMakeFiles/next_permutation.dir/all
 
 # Build rule for subdir invocation for target.
@@ -182,6 +240,32 @@ next_permutation: CMakeFiles/next_permutation.dir/rule
 CMakeFiles/next_permutation.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\next_permutation.dir\build.make CMakeFiles/next_permutation.dir/clean
 .PHONY : CMakeFiles/next_permutation.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/magic-square.dir
+
+# All Build rule for target.
+CMakeFiles/magic-square.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\magic-square.dir\build.make CMakeFiles/magic-square.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\magic-square.dir\build.make CMakeFiles/magic-square.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target magic-square"
+.PHONY : CMakeFiles/magic-square.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/magic-square.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/magic-square.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/magic-square.dir/rule
+
+# Convenience name for target.
+magic-square: CMakeFiles/magic-square.dir/rule
+.PHONY : magic-square
+
+# clean rule for target.
+CMakeFiles/magic-square.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\magic-square.dir\build.make CMakeFiles/magic-square.dir/clean
+.PHONY : CMakeFiles/magic-square.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

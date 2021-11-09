@@ -116,6 +116,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named lcp
+
+# Build rule for target.
+lcp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 lcp
+.PHONY : lcp
+
+# fast build rule for target.
+lcp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lcp.dir\build.make CMakeFiles/lcp.dir/build
+.PHONY : lcp/fast
+
+#=============================================================================
 # Target rules for targets named sum
 
 # Build rule for target.
@@ -127,6 +140,19 @@ sum: cmake_check_build_system
 sum/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sum.dir\build.make CMakeFiles/sum.dir/build
 .PHONY : sum/fast
+
+#=============================================================================
+# Target rules for targets named anotherRadix
+
+# Build rule for target.
+anotherRadix: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 anotherRadix
+.PHONY : anotherRadix
+
+# fast build rule for target.
+anotherRadix/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\anotherRadix.dir\build.make CMakeFiles/anotherRadix.dir/build
+.PHONY : anotherRadix/fast
 
 #=============================================================================
 # Target rules for targets named absolute-prime
@@ -167,6 +193,19 @@ next_permutation/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\next_permutation.dir\build.make CMakeFiles/next_permutation.dir/build
 .PHONY : next_permutation/fast
 
+#=============================================================================
+# Target rules for targets named magic-square
+
+# Build rule for target.
+magic-square: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 magic-square
+.PHONY : magic-square
+
+# fast build rule for target.
+magic-square/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\magic-square.dir\build.make CMakeFiles/magic-square.dir/build
+.PHONY : magic-square/fast
+
 absolute-prime.obj: absolute-prime.c.obj
 .PHONY : absolute-prime.obj
 
@@ -190,6 +229,78 @@ absolute-prime.s: absolute-prime.c.s
 absolute-prime.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\absolute-prime.dir\build.make CMakeFiles/absolute-prime.dir/absolute-prime.c.s
 .PHONY : absolute-prime.c.s
+
+anotherRadix.obj: anotherRadix.c.obj
+.PHONY : anotherRadix.obj
+
+# target to build an object file
+anotherRadix.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\anotherRadix.dir\build.make CMakeFiles/anotherRadix.dir/anotherRadix.c.obj
+.PHONY : anotherRadix.c.obj
+
+anotherRadix.i: anotherRadix.c.i
+.PHONY : anotherRadix.i
+
+# target to preprocess a source file
+anotherRadix.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\anotherRadix.dir\build.make CMakeFiles/anotherRadix.dir/anotherRadix.c.i
+.PHONY : anotherRadix.c.i
+
+anotherRadix.s: anotherRadix.c.s
+.PHONY : anotherRadix.s
+
+# target to generate assembly for a file
+anotherRadix.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\anotherRadix.dir\build.make CMakeFiles/anotherRadix.dir/anotherRadix.c.s
+.PHONY : anotherRadix.c.s
+
+lcp.obj: lcp.c.obj
+.PHONY : lcp.obj
+
+# target to build an object file
+lcp.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lcp.dir\build.make CMakeFiles/lcp.dir/lcp.c.obj
+.PHONY : lcp.c.obj
+
+lcp.i: lcp.c.i
+.PHONY : lcp.i
+
+# target to preprocess a source file
+lcp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lcp.dir\build.make CMakeFiles/lcp.dir/lcp.c.i
+.PHONY : lcp.c.i
+
+lcp.s: lcp.c.s
+.PHONY : lcp.s
+
+# target to generate assembly for a file
+lcp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lcp.dir\build.make CMakeFiles/lcp.dir/lcp.c.s
+.PHONY : lcp.c.s
+
+magic-square.obj: magic-square.c.obj
+.PHONY : magic-square.obj
+
+# target to build an object file
+magic-square.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\magic-square.dir\build.make CMakeFiles/magic-square.dir/magic-square.c.obj
+.PHONY : magic-square.c.obj
+
+magic-square.i: magic-square.c.i
+.PHONY : magic-square.i
+
+# target to preprocess a source file
+magic-square.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\magic-square.dir\build.make CMakeFiles/magic-square.dir/magic-square.c.i
+.PHONY : magic-square.c.i
+
+magic-square.s: magic-square.c.s
+.PHONY : magic-square.s
+
+# target to generate assembly for a file
+magic-square.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\magic-square.dir\build.make CMakeFiles/magic-square.dir/magic-square.c.s
+.PHONY : magic-square.c.s
 
 next-permutation.obj: next-permutation.c.obj
 .PHONY : next-permutation.obj
@@ -272,12 +383,24 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... absolute-prime
+	@echo ... anotherRadix
+	@echo ... lcp
+	@echo ... magic-square
 	@echo ... next_permutation
 	@echo ... radix
 	@echo ... sum
 	@echo ... absolute-prime.obj
 	@echo ... absolute-prime.i
 	@echo ... absolute-prime.s
+	@echo ... anotherRadix.obj
+	@echo ... anotherRadix.i
+	@echo ... anotherRadix.s
+	@echo ... lcp.obj
+	@echo ... lcp.i
+	@echo ... lcp.s
+	@echo ... magic-square.obj
+	@echo ... magic-square.i
+	@echo ... magic-square.s
 	@echo ... next-permutation.obj
 	@echo ... next-permutation.i
 	@echo ... next-permutation.s

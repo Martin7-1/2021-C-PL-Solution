@@ -46,8 +46,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/lcp.dir/DependInfo.cmake"
   "CMakeFiles/sum.dir/DependInfo.cmake"
+  "CMakeFiles/anotherRadix.dir/DependInfo.cmake"
   "CMakeFiles/absolute-prime.dir/DependInfo.cmake"
   "CMakeFiles/radix.dir/DependInfo.cmake"
   "CMakeFiles/next_permutation.dir/DependInfo.cmake"
+  "CMakeFiles/magic-square.dir/DependInfo.cmake"
   )
