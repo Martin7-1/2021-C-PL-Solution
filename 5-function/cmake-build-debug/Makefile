@@ -154,6 +154,19 @@ radix/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\radix.dir\build.make CMakeFiles/radix.dir/build
 .PHONY : radix/fast
 
+#=============================================================================
+# Target rules for targets named next_permutation
+
+# Build rule for target.
+next_permutation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 next_permutation
+.PHONY : next_permutation
+
+# fast build rule for target.
+next_permutation/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\next_permutation.dir\build.make CMakeFiles/next_permutation.dir/build
+.PHONY : next_permutation/fast
+
 absolute-prime.obj: absolute-prime.c.obj
 .PHONY : absolute-prime.obj
 
@@ -177,6 +190,30 @@ absolute-prime.s: absolute-prime.c.s
 absolute-prime.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\absolute-prime.dir\build.make CMakeFiles/absolute-prime.dir/absolute-prime.c.s
 .PHONY : absolute-prime.c.s
+
+next-permutation.obj: next-permutation.c.obj
+.PHONY : next-permutation.obj
+
+# target to build an object file
+next-permutation.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\next_permutation.dir\build.make CMakeFiles/next_permutation.dir/next-permutation.c.obj
+.PHONY : next-permutation.c.obj
+
+next-permutation.i: next-permutation.c.i
+.PHONY : next-permutation.i
+
+# target to preprocess a source file
+next-permutation.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\next_permutation.dir\build.make CMakeFiles/next_permutation.dir/next-permutation.c.i
+.PHONY : next-permutation.c.i
+
+next-permutation.s: next-permutation.c.s
+.PHONY : next-permutation.s
+
+# target to generate assembly for a file
+next-permutation.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\next_permutation.dir\build.make CMakeFiles/next_permutation.dir/next-permutation.c.s
+.PHONY : next-permutation.c.s
 
 radix.obj: radix.c.obj
 .PHONY : radix.obj
@@ -235,11 +272,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... absolute-prime
+	@echo ... next_permutation
 	@echo ... radix
 	@echo ... sum
 	@echo ... absolute-prime.obj
 	@echo ... absolute-prime.i
 	@echo ... absolute-prime.s
+	@echo ... next-permutation.obj
+	@echo ... next-permutation.i
+	@echo ... next-permutation.s
 	@echo ... radix.obj
 	@echo ... radix.i
 	@echo ... radix.s

@@ -49,4 +49,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/sum.dir/DependInfo.cmake"
   "CMakeFiles/absolute-prime.dir/DependInfo.cmake"
   "CMakeFiles/radix.dir/DependInfo.cmake"
+  "CMakeFiles/next_permutation.dir/DependInfo.cmake"
   )
