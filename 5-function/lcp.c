@@ -3,8 +3,10 @@
 //
 #include <stdio.h>
 #include <malloc.h>
+#include <string.h>
 
 int findLcp(const char* strA, const char* strB);
+void moveBackward(char* str, char ch);
 
 int main()
 {
@@ -16,6 +18,7 @@ int main()
     for (int i = 0; i < strNumber; i++) {
         pStrings[i] = (char*) malloc(1000 * sizeof(char));
         // 读入字符串
+        // 这里需要注意读入的是空字符串的情况
         scanf("%s", pStrings[i]);
     }
 
