@@ -53,4 +53,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/radix.dir/DependInfo.cmake"
   "CMakeFiles/next_permutation.dir/DependInfo.cmake"
   "CMakeFiles/magic-square.dir/DependInfo.cmake"
+  "CMakeFiles/ternary-search.dir/DependInfo.cmake"
   )

@@ -206,6 +206,19 @@ magic-square/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\magic-square.dir\build.make CMakeFiles/magic-square.dir/build
 .PHONY : magic-square/fast
 
+#=============================================================================
+# Target rules for targets named ternary-search
+
+# Build rule for target.
+ternary-search: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ternary-search
+.PHONY : ternary-search
+
+# fast build rule for target.
+ternary-search/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ternary-search.dir\build.make CMakeFiles/ternary-search.dir/build
+.PHONY : ternary-search/fast
+
 absolute-prime.obj: absolute-prime.c.obj
 .PHONY : absolute-prime.obj
 
@@ -374,6 +387,30 @@ sum.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sum.dir\build.make CMakeFiles/sum.dir/sum.c.s
 .PHONY : sum.c.s
 
+ternary-search.obj: ternary-search.c.obj
+.PHONY : ternary-search.obj
+
+# target to build an object file
+ternary-search.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ternary-search.dir\build.make CMakeFiles/ternary-search.dir/ternary-search.c.obj
+.PHONY : ternary-search.c.obj
+
+ternary-search.i: ternary-search.c.i
+.PHONY : ternary-search.i
+
+# target to preprocess a source file
+ternary-search.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ternary-search.dir\build.make CMakeFiles/ternary-search.dir/ternary-search.c.i
+.PHONY : ternary-search.c.i
+
+ternary-search.s: ternary-search.c.s
+.PHONY : ternary-search.s
+
+# target to generate assembly for a file
+ternary-search.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ternary-search.dir\build.make CMakeFiles/ternary-search.dir/ternary-search.c.s
+.PHONY : ternary-search.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -389,6 +426,7 @@ help:
 	@echo ... next_permutation
 	@echo ... radix
 	@echo ... sum
+	@echo ... ternary-search
 	@echo ... absolute-prime.obj
 	@echo ... absolute-prime.i
 	@echo ... absolute-prime.s
@@ -410,6 +448,9 @@ help:
 	@echo ... sum.obj
 	@echo ... sum.i
 	@echo ... sum.s
+	@echo ... ternary-search.obj
+	@echo ... ternary-search.i
+	@echo ... ternary-search.s
 .PHONY : help
 
 

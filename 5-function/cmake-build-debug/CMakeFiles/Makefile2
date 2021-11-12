@@ -69,6 +69,7 @@ all: CMakeFiles/absolute-prime.dir/all
 all: CMakeFiles/radix.dir/all
 all: CMakeFiles/next_permutation.dir/all
 all: CMakeFiles/magic-square.dir/all
+all: CMakeFiles/ternary-search.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -83,6 +84,7 @@ clean: CMakeFiles/absolute-prime.dir/clean
 clean: CMakeFiles/radix.dir/clean
 clean: CMakeFiles/next_permutation.dir/clean
 clean: CMakeFiles/magic-square.dir/clean
+clean: CMakeFiles/ternary-search.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -266,6 +268,32 @@ magic-square: CMakeFiles/magic-square.dir/rule
 CMakeFiles/magic-square.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\magic-square.dir\build.make CMakeFiles/magic-square.dir/clean
 .PHONY : CMakeFiles/magic-square.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/ternary-search.dir
+
+# All Build rule for target.
+CMakeFiles/ternary-search.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ternary-search.dir\build.make CMakeFiles/ternary-search.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ternary-search.dir\build.make CMakeFiles/ternary-search.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles --progress-num=15,16 "Built target ternary-search"
+.PHONY : CMakeFiles/ternary-search.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ternary-search.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/ternary-search.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\5-function\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/ternary-search.dir/rule
+
+# Convenience name for target.
+ternary-search: CMakeFiles/ternary-search.dir/rule
+.PHONY : ternary-search
+
+# clean rule for target.
+CMakeFiles/ternary-search.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ternary-search.dir\build.make CMakeFiles/ternary-search.dir/clean
+.PHONY : CMakeFiles/ternary-search.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

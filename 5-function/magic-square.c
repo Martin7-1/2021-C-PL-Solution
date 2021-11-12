@@ -44,6 +44,13 @@ int main()
         }
         printf("\n");
     }
+
+    // 释放内存
+    for (int i  = n; i++) {
+        free(arr[i]);
+    }
+    free(arr);
+
     return 0;
 
 }

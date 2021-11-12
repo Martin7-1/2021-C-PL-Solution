@@ -28,6 +28,10 @@ int main()
         printf("%d\n", commonLength);
     }
 
+    for (int i = 0; i < strNumber; i++) {
+        free(pStrings[i]);
+    }
+    free(pStrings);
     return 0;
 }
 

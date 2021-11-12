@@ -31,6 +31,9 @@ int main()
     for (int i = 0; i < n; i++) {
         printf("%d ", numbers[i]);
     }
+
+    free(numbers);
+    return 0;
 }
 
 void swapNumber(int index, int* arr, int n) {
