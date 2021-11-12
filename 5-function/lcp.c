@@ -18,7 +18,6 @@ int main()
     for (int i = 0; i < strNumber; i++) {
         pStrings[i] = (char*) malloc(1000 * sizeof(char));
         // 读入字符串
-        // 这里需要注意读入的是空字符串的情况
         scanf("%s", pStrings[i]);
     }
 
@@ -35,8 +34,13 @@ int main()
 int findLcp(const char* strA, const char* strB) {
     // 找两个字符串的公共前缀
     int index = 0;
+    int length = strlen(strA) < strlen(strB) ? strlen(strA) : strlen(strB);
     while (strA[index] == strB[index]) {
         index++;
+        if (index > length) {
+            index = length;
+            break;
+        }
     }
 
     return index;
