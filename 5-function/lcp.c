@@ -6,7 +6,6 @@
 #include <string.h>
 
 int findLcp(const char* strA, const char* strB);
-void moveBackward(char* str, char ch);
 
 int main()
 {
