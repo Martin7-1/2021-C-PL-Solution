@@ -5,6 +5,7 @@
 #include <malloc.h>
 #include <math.h>
 
+void derivation(int* coef, int coefNumber);
 double calculate(double x, int* coef, int coefNumber);
 
 int main()
@@ -18,34 +19,46 @@ int main()
         scanf("%d", &coef[i]);
     }
 
-    double left, right;
+    // 求导二分
+    derivation(coef, coefNumber);
+    double left;
+    double right;
     scanf("%lf %lf", &left, &right);
 
-    while (right - left > 10e-20) {
-        double pointOne = left + (right - left) / 3.0;
-        double pointTwo = left + (right - left) * 2 / 3.0;
-        double fPOne = calculate(pointOne, coef, coefNumber);
-        double fPTwo = calculate(pointTwo, coef, coefNumber);
-
-        if (fabs(fPOne - fPTwo) < 10e-8 || fPOne > fPTwo) {
-            right = pointTwo;
+    while (left <= right) {
+        double middle = (left + right) / 2;
+        double ans = calculate(middle, coef, coefNumber);
+        if (fabs(ans) < 10e-6) {
+            printf("%lf", middle);
+            break;
+        } else if (ans > 0) {
+            left = middle;
         } else {
-            left = pointOne;
+            right = middle;
         }
     }
 
-    printf("%.6lf", left);
-    free(coef);
+    free(coefNumber);
+    return 0;
+}
+
+void derivation(int* coef, int coefNumber) {
+    // 求导
+    int temp = coefNumber;
+    for (int i = 0; i < coefNumber + 1; i++) {
+        coef[i] *= temp;
+        temp--;
+    }
 }
 
 double calculate(double x, int* coef, int coefNumber) {
-    double res = 0;
+    double ans = 0;
     double product = 1;
 
-    for (int i = coefNumber; i >= 0; i--) {
-        res += coef[i] * product;
+    for (int i = coefNumber - 1; i >= 0; i--) {
+        ans += product * coef[i];
         product *= x;
     }
 
-    return res;
+    return ans;
 }
