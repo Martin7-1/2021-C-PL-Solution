@@ -2,61 +2,49 @@
 // Created by Zyi on 2021/11/12.
 //
 #include <stdio.h>
-#include <malloc.h>
 #include <math.h>
 
-void derivation(int* coef, int coefNumber);
-double calculate(double x, int* coef, int coefNumber);
+long double calculate(long double x, int* coef, int coefNumber);
 
-int main()
-{
+int main() {
     int coefNumber;
-    scanf("%d", &coefNumber);
-    // 一个多项式加上常数总共有n+1个系数(假设最高项次数为n)
-    int* coef = malloc((coefNumber + 1) * sizeof(int));
+    int coef[200];
 
-    for (int i = 0; i < coefNumber + 1; i++) {
+    scanf("%d", &coefNumber);
+    for (int i = 0; i <= coefNumber; i++) {
+        // 获得系数
         scanf("%d", &coef[i]);
     }
 
-    // 求导二分
-    derivation(coef, coefNumber);
-    double left;
-    double right;
-    scanf("%lf %lf", &left, &right);
+    long double left;
+    long double right;
+    scanf("%Lf %Lf", &left, &right);
 
-    while (left <= right) {
-        double middle = (left + right) / 2;
-        double ans = calculate(middle, coef, coefNumber);
-        if (fabs(ans) < 10e-6) {
-            printf("%lf", middle);
-            break;
-        } else if (ans > 0) {
-            left = middle;
+    while (right - left >= 1e-8) {
+        long double pointOne = left + (right - left) / 3;
+        long double pointTwo = left + (right - left) / 3 * 2;
+        long double fPOne = calculate(pointOne, coef, coefNumber);
+        long double fPTwo = calculate(pointTwo, coef, coefNumber);
+
+        if (fPOne >= fPTwo) {
+            right = pointTwo;
         } else {
-            right = middle;
+            left = pointOne;
         }
     }
 
-    free(coefNumber);
+    printf("%.6Lf", left);
+
     return 0;
 }
 
-void derivation(int* coef, int coefNumber) {
-    // 求导
-    int temp = coefNumber;
-    for (int i = 0; i < coefNumber + 1; i++) {
-        coef[i] *= temp;
-        temp--;
-    }
-}
+long double calculate(long double x, int* coef, int coefNumber) {
+    // 计算f(x)
+    long double ans = 0.0f;
+    long double product = 1;
 
-double calculate(double x, int* coef, int coefNumber) {
-    double ans = 0;
-    double product = 1;
-
-    for (int i = coefNumber - 1; i >= 0; i--) {
-        ans += product * coef[i];
+    for (int i = coefNumber; i >= 0; i--) {
+        ans += coef[i] * product;
         product *= x;
     }
 
