@@ -36,6 +36,7 @@ int main() {
 
     printf("%.6Lf", left);
 
+    free(coef);
     return 0;
 }
 
