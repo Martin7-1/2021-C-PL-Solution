@@ -2,15 +2,16 @@
 // Created by Zyi on 2021/11/12.
 //
 #include <stdio.h>
-#include <math.h>
+#include <malloc.h>
 
 long double calculate(long double x, int* coef, int coefNumber);
 
 int main() {
     int coefNumber;
-    int coef[200];
 
     scanf("%d", &coefNumber);
+    // 申请动态数组
+    int* coef = malloc((coefNumber + 1) * sizeof(int));
     for (int i = 0; i <= coefNumber; i++) {
         // 获得系数
         scanf("%d", &coef[i]);
