@@ -128,6 +128,19 @@ plagiarize/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\plagiarize.dir\build.make CMakeFiles/plagiarize.dir/build
 .PHONY : plagiarize/fast
 
+#=============================================================================
+# Target rules for targets named yanghui
+
+# Build rule for target.
+yanghui: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 yanghui
+.PHONY : yanghui
+
+# fast build rule for target.
+yanghui/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\yanghui.dir\build.make CMakeFiles/yanghui.dir/build
+.PHONY : yanghui/fast
+
 plagiarize.obj: plagiarize.c.obj
 .PHONY : plagiarize.obj
 
@@ -152,6 +165,30 @@ plagiarize.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\plagiarize.dir\build.make CMakeFiles/plagiarize.dir/plagiarize.c.s
 .PHONY : plagiarize.c.s
 
+yanghui.obj: yanghui.c.obj
+.PHONY : yanghui.obj
+
+# target to build an object file
+yanghui.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\yanghui.dir\build.make CMakeFiles/yanghui.dir/yanghui.c.obj
+.PHONY : yanghui.c.obj
+
+yanghui.i: yanghui.c.i
+.PHONY : yanghui.i
+
+# target to preprocess a source file
+yanghui.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\yanghui.dir\build.make CMakeFiles/yanghui.dir/yanghui.c.i
+.PHONY : yanghui.c.i
+
+yanghui.s: yanghui.c.s
+.PHONY : yanghui.s
+
+# target to generate assembly for a file
+yanghui.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\yanghui.dir\build.make CMakeFiles/yanghui.dir/yanghui.c.s
+.PHONY : yanghui.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +198,13 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... plagiarize
+	@echo ... yanghui
 	@echo ... plagiarize.obj
 	@echo ... plagiarize.i
 	@echo ... plagiarize.s
+	@echo ... yanghui.obj
+	@echo ... yanghui.i
+	@echo ... yanghui.s
 .PHONY : help
 
 
