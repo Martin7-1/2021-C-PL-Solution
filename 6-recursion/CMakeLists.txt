@@ -3,6 +3,8 @@ project(6_recursion)
 
 set(CMAKE_CXX_STANDARD 14)
 
+add_executable(triangle triangle.c)
 add_executable(plagiarize plagiarize.c)
 add_executable(yanghui yanghui.c)
 add_executable(tile tile.c)
+add_executable(max max.c)

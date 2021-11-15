@@ -64,16 +64,6 @@ CMAKE_BINARY_DIR = D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"D:\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -83,6 +73,16 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	"D:\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -116,6 +116,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named triangle
+
+# Build rule for target.
+triangle: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 triangle
+.PHONY : triangle
+
+# fast build rule for target.
+triangle/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\triangle.dir\build.make CMakeFiles/triangle.dir/build
+.PHONY : triangle/fast
+
+#=============================================================================
 # Target rules for targets named plagiarize
 
 # Build rule for target.
@@ -142,6 +155,19 @@ yanghui/fast:
 .PHONY : yanghui/fast
 
 #=============================================================================
+# Target rules for targets named max
+
+# Build rule for target.
+max: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 max
+.PHONY : max
+
+# fast build rule for target.
+max/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\max.dir\build.make CMakeFiles/max.dir/build
+.PHONY : max/fast
+
+#=============================================================================
 # Target rules for targets named tile
 
 # Build rule for target.
@@ -153,6 +179,30 @@ tile: cmake_check_build_system
 tile/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tile.dir\build.make CMakeFiles/tile.dir/build
 .PHONY : tile/fast
+
+max.obj: max.c.obj
+.PHONY : max.obj
+
+# target to build an object file
+max.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\max.dir\build.make CMakeFiles/max.dir/max.c.obj
+.PHONY : max.c.obj
+
+max.i: max.c.i
+.PHONY : max.i
+
+# target to preprocess a source file
+max.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\max.dir\build.make CMakeFiles/max.dir/max.c.i
+.PHONY : max.c.i
+
+max.s: max.c.s
+.PHONY : max.s
+
+# target to generate assembly for a file
+max.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\max.dir\build.make CMakeFiles/max.dir/max.c.s
+.PHONY : max.c.s
 
 plagiarize.obj: plagiarize.c.obj
 .PHONY : plagiarize.obj
@@ -202,6 +252,30 @@ tile.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tile.dir\build.make CMakeFiles/tile.dir/tile.c.s
 .PHONY : tile.c.s
 
+triangle.obj: triangle.c.obj
+.PHONY : triangle.obj
+
+# target to build an object file
+triangle.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\triangle.dir\build.make CMakeFiles/triangle.dir/triangle.c.obj
+.PHONY : triangle.c.obj
+
+triangle.i: triangle.c.i
+.PHONY : triangle.i
+
+# target to preprocess a source file
+triangle.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\triangle.dir\build.make CMakeFiles/triangle.dir/triangle.c.i
+.PHONY : triangle.c.i
+
+triangle.s: triangle.c.s
+.PHONY : triangle.s
+
+# target to generate assembly for a file
+triangle.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\triangle.dir\build.make CMakeFiles/triangle.dir/triangle.c.s
+.PHONY : triangle.c.s
+
 yanghui.obj: yanghui.c.obj
 .PHONY : yanghui.obj
 
@@ -234,15 +308,23 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... max
 	@echo ... plagiarize
 	@echo ... tile
+	@echo ... triangle
 	@echo ... yanghui
+	@echo ... max.obj
+	@echo ... max.i
+	@echo ... max.s
 	@echo ... plagiarize.obj
 	@echo ... plagiarize.i
 	@echo ... plagiarize.s
 	@echo ... tile.obj
 	@echo ... tile.i
 	@echo ... tile.s
+	@echo ... triangle.obj
+	@echo ... triangle.i
+	@echo ... triangle.s
 	@echo ... yanghui.obj
 	@echo ... yanghui.i
 	@echo ... yanghui.s
