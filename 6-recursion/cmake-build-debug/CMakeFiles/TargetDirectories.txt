@@ -5,3 +5,4 @@ D:/C-PL/2021-C-PL-Solution/6-recursion/cmake-build-debug/CMakeFiles/yanghui.dir
 D:/C-PL/2021-C-PL-Solution/6-recursion/cmake-build-debug/CMakeFiles/max.dir
 D:/C-PL/2021-C-PL-Solution/6-recursion/cmake-build-debug/CMakeFiles/tile.dir
 D:/C-PL/2021-C-PL-Solution/6-recursion/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/C-PL/2021-C-PL-Solution/6-recursion/cmake-build-debug/CMakeFiles/decomposition.dir

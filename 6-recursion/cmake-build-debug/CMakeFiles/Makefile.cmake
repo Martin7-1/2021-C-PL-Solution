@@ -56,4 +56,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/yanghui.dir/DependInfo.cmake"
   "CMakeFiles/max.dir/DependInfo.cmake"
   "CMakeFiles/tile.dir/DependInfo.cmake"
+  "CMakeFiles/decomposition.dir/DependInfo.cmake"
   )

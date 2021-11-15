@@ -180,6 +180,43 @@ tile/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tile.dir\build.make CMakeFiles/tile.dir/build
 .PHONY : tile/fast
 
+#=============================================================================
+# Target rules for targets named decomposition
+
+# Build rule for target.
+decomposition: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 decomposition
+.PHONY : decomposition
+
+# fast build rule for target.
+decomposition/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\decomposition.dir\build.make CMakeFiles/decomposition.dir/build
+.PHONY : decomposition/fast
+
+decomposition.obj: decomposition.c.obj
+.PHONY : decomposition.obj
+
+# target to build an object file
+decomposition.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\decomposition.dir\build.make CMakeFiles/decomposition.dir/decomposition.c.obj
+.PHONY : decomposition.c.obj
+
+decomposition.i: decomposition.c.i
+.PHONY : decomposition.i
+
+# target to preprocess a source file
+decomposition.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\decomposition.dir\build.make CMakeFiles/decomposition.dir/decomposition.c.i
+.PHONY : decomposition.c.i
+
+decomposition.s: decomposition.c.s
+.PHONY : decomposition.s
+
+# target to generate assembly for a file
+decomposition.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\decomposition.dir\build.make CMakeFiles/decomposition.dir/decomposition.c.s
+.PHONY : decomposition.c.s
+
 max.obj: max.c.obj
 .PHONY : max.obj
 
@@ -308,11 +345,15 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... decomposition
 	@echo ... max
 	@echo ... plagiarize
 	@echo ... tile
 	@echo ... triangle
 	@echo ... yanghui
+	@echo ... decomposition.obj
+	@echo ... decomposition.i
+	@echo ... decomposition.s
 	@echo ... max.obj
 	@echo ... max.i
 	@echo ... max.s
