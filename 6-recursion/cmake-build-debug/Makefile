@@ -141,6 +141,19 @@ yanghui/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\yanghui.dir\build.make CMakeFiles/yanghui.dir/build
 .PHONY : yanghui/fast
 
+#=============================================================================
+# Target rules for targets named tile
+
+# Build rule for target.
+tile: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tile
+.PHONY : tile
+
+# fast build rule for target.
+tile/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tile.dir\build.make CMakeFiles/tile.dir/build
+.PHONY : tile/fast
+
 plagiarize.obj: plagiarize.c.obj
 .PHONY : plagiarize.obj
 
@@ -164,6 +177,30 @@ plagiarize.s: plagiarize.c.s
 plagiarize.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\plagiarize.dir\build.make CMakeFiles/plagiarize.dir/plagiarize.c.s
 .PHONY : plagiarize.c.s
+
+tile.obj: tile.c.obj
+.PHONY : tile.obj
+
+# target to build an object file
+tile.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tile.dir\build.make CMakeFiles/tile.dir/tile.c.obj
+.PHONY : tile.c.obj
+
+tile.i: tile.c.i
+.PHONY : tile.i
+
+# target to preprocess a source file
+tile.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tile.dir\build.make CMakeFiles/tile.dir/tile.c.i
+.PHONY : tile.c.i
+
+tile.s: tile.c.s
+.PHONY : tile.s
+
+# target to generate assembly for a file
+tile.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tile.dir\build.make CMakeFiles/tile.dir/tile.c.s
+.PHONY : tile.c.s
 
 yanghui.obj: yanghui.c.obj
 .PHONY : yanghui.obj
@@ -198,10 +235,14 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... plagiarize
+	@echo ... tile
 	@echo ... yanghui
 	@echo ... plagiarize.obj
 	@echo ... plagiarize.i
 	@echo ... plagiarize.s
+	@echo ... tile.obj
+	@echo ... tile.i
+	@echo ... tile.s
 	@echo ... yanghui.obj
 	@echo ... yanghui.i
 	@echo ... yanghui.s

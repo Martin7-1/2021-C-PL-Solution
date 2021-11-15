@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug
 # The main recursive "all" target.
 all: CMakeFiles/plagiarize.dir/all
 all: CMakeFiles/yanghui.dir/all
+all: CMakeFiles/tile.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,6 +74,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/plagiarize.dir/clean
 clean: CMakeFiles/yanghui.dir/clean
+clean: CMakeFiles/tile.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -108,7 +110,7 @@ CMakeFiles/plagiarize.dir/clean:
 CMakeFiles/yanghui.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\yanghui.dir\build.make CMakeFiles/yanghui.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\yanghui.dir\build.make CMakeFiles/yanghui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target yanghui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target yanghui"
 .PHONY : CMakeFiles/yanghui.dir/all
 
 # Build rule for subdir invocation for target.
@@ -126,6 +128,32 @@ yanghui: CMakeFiles/yanghui.dir/rule
 CMakeFiles/yanghui.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\yanghui.dir\build.make CMakeFiles/yanghui.dir/clean
 .PHONY : CMakeFiles/yanghui.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tile.dir
+
+# All Build rule for target.
+CMakeFiles/tile.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tile.dir\build.make CMakeFiles/tile.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tile.dir\build.make CMakeFiles/tile.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target tile"
+.PHONY : CMakeFiles/tile.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tile.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/tile.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/tile.dir/rule
+
+# Convenience name for target.
+tile: CMakeFiles/tile.dir/rule
+.PHONY : tile
+
+# clean rule for target.
+CMakeFiles/tile.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tile.dir\build.make CMakeFiles/tile.dir/clean
+.PHONY : CMakeFiles/tile.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
