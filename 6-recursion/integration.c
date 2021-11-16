@@ -2,23 +2,22 @@
 // Created by Zyi on 2021/11/16.
 //
 #include <stdio.h>
-#include <malloc.h>
 #include <math.h>
 
-int* coef;
-double* integrationCoef;
+int coef[200];
+double integrationCoef[200];
+int coefNumber;
 
-double calculate(int coefNumber, double x);
-double calculateInt(int coefNumber, double x, int p);
-double simpsonIntegration(int coefNumber, double left, double right, int p, double deviation);
-double simpsonMethod(int coefNumber, double left, double right, int p);
+double calculate(double x);
+double calculateInt(double x, int p);
+double simpsonIntegration(double left, double right, int p, double deviation);
+double simpsonMethod(double left, double right, int p);
 
 int main() {
-    int n, p;
+    int p;
     double deviation = 1e-6;
-    scanf("%d %d", &n, &p);
-    coef = malloc((n + 1) * sizeof(int));
-    for (int i = 0; i <= n; i++) {
+    scanf("%d %d", &coefNumber, &p);
+    for (int i = 0; i <= coefNumber; i++) {
         scanf("%d", &coef[i]);
     }
 
@@ -29,26 +28,23 @@ int main() {
 
     if (p == 1) {
         // p == 1时我们用常规积分方法
-        integrationCoef = malloc((n + 1) * sizeof(double));
-        double temp = n;
-        for (int i = n; i >= 0; i--) {
+        double temp = coefNumber;
+        for (int i = coefNumber; i >= 0; i--) {
             integrationCoef[i] = coef[i] / (temp + 1);
             temp--;
         }
         // F(b) - F(a)
-        ans = calculate(n, b) - calculate(n, a);
-        free(integrationCoef);
+        ans = calculate(b) - calculate(a);
     } else {
         // adaptive simpson's method
-        ans = simpsonIntegration(n, a, b, p, deviation);
+        ans = simpsonIntegration(a, b, p, deviation);
     }
 
     printf("%lf", ans);
-    free(coef);
     return 0;
 }
 
-double calculate(int coefNumber, double x) {
+double calculate(double x) {
     double ans = 0.0;
     double product = x;
 
@@ -60,7 +56,7 @@ double calculate(int coefNumber, double x) {
     return ans;
 }
 
-double calculateInt(int coefNumber, double x, int p) {
+double calculateInt(double x, int p) {
     double ans = 0.0;
     double product = 1;
 
@@ -72,24 +68,24 @@ double calculateInt(int coefNumber, double x, int p) {
     return pow(ans, p);
 }
 
-double simpsonIntegration(int coefNumber, double left, double right, int p, double deviation) {
+double simpsonIntegration(double left, double right, int p, double deviation) {
     double middle = (right + left) / 2.0;
-    double sl = simpsonMethod(coef, coefNumber, left, middle, p);
-    double sr = simpsonMethod(coef, coefNumber, middle, right, p);
-    double s = simpsonMethod(coef, coefNumber, left, right, p);
+    double sl = simpsonMethod(left, middle, p);
+    double sr = simpsonMethod(middle, right, p);
+    double s = simpsonMethod(left, right, p);
     if (fabs(sl + sr - s) <= 15 * deviation) {
-        return sl + sr +(sl + sr - s) / 15;
+        return sl + sr + (sl + sr - s) / 15;
     } else {
         // 误差除2
-        return simpsonIntegration(coef, coefNumber, left, middle, p, deviation / 2) + simpsonIntegration(coef, coefNumber, middle, right, p, deviation / 2);
+        return simpsonIntegration(left, middle, p, deviation / 2) + simpsonIntegration(middle, right, p, deviation / 2);
     }
 }
 
-double simpsonMethod(int coefNumber, double left, double right, int p) {
+double simpsonMethod(double left, double right, int p) {
     // 用辛普森公式计算的值
     double middle = (right + left) / 2.0;
-    double ans1 = 4 * calculateInt(coef, coefNumber, middle, p);
-    double ans2 = calculateInt(coef, coefNumber, left, p);
-    double ans3 = calculateInt(coef, coefNumber, right, p);
+    double ans1 = 4 * calculateInt(middle, p);
+    double ans2 = calculateInt(left, p);
+    double ans3 = calculateInt(right, p);
     return (right - left) * (ans1 + ans2 + ans3) / 6;
 }
