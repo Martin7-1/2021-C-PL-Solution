@@ -64,16 +64,6 @@ CMAKE_BINARY_DIR = D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"D:\CLion 2021.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -83,6 +73,16 @@ edit_cache:
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"D:\CLion 2021.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -114,6 +114,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named integration
+
+# Build rule for target.
+integration: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 integration
+.PHONY : integration
+
+# fast build rule for target.
+integration/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\integration.dir\build.make CMakeFiles/integration.dir/build
+.PHONY : integration/fast
 
 #=============================================================================
 # Target rules for targets named triangle
@@ -216,6 +229,30 @@ decomposition.s: decomposition.c.s
 decomposition.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\decomposition.dir\build.make CMakeFiles/decomposition.dir/decomposition.c.s
 .PHONY : decomposition.c.s
+
+integration.obj: integration.c.obj
+.PHONY : integration.obj
+
+# target to build an object file
+integration.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\integration.dir\build.make CMakeFiles/integration.dir/integration.c.obj
+.PHONY : integration.c.obj
+
+integration.i: integration.c.i
+.PHONY : integration.i
+
+# target to preprocess a source file
+integration.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\integration.dir\build.make CMakeFiles/integration.dir/integration.c.i
+.PHONY : integration.c.i
+
+integration.s: integration.c.s
+.PHONY : integration.s
+
+# target to generate assembly for a file
+integration.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\integration.dir\build.make CMakeFiles/integration.dir/integration.c.s
+.PHONY : integration.c.s
 
 max.obj: max.c.obj
 .PHONY : max.obj
@@ -346,6 +383,7 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... decomposition
+	@echo ... integration
 	@echo ... max
 	@echo ... plagiarize
 	@echo ... tile
@@ -354,6 +392,9 @@ help:
 	@echo ... decomposition.obj
 	@echo ... decomposition.i
 	@echo ... decomposition.s
+	@echo ... integration.obj
+	@echo ... integration.i
+	@echo ... integration.s
 	@echo ... max.obj
 	@echo ... max.i
 	@echo ... max.s

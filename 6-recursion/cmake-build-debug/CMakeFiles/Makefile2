@@ -62,6 +62,7 @@ CMAKE_BINARY_DIR = D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/integration.dir/all
 all: CMakeFiles/triangle.dir/all
 all: CMakeFiles/plagiarize.dir/all
 all: CMakeFiles/yanghui.dir/all
@@ -75,6 +76,7 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/integration.dir/clean
 clean: CMakeFiles/triangle.dir/clean
 clean: CMakeFiles/plagiarize.dir/clean
 clean: CMakeFiles/yanghui.dir/clean
@@ -84,13 +86,39 @@ clean: CMakeFiles/decomposition.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/integration.dir
+
+# All Build rule for target.
+CMakeFiles/integration.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\integration.dir\build.make CMakeFiles/integration.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\integration.dir\build.make CMakeFiles/integration.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target integration"
+.PHONY : CMakeFiles/integration.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/integration.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/integration.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/integration.dir/rule
+
+# Convenience name for target.
+integration: CMakeFiles/integration.dir/rule
+.PHONY : integration
+
+# clean rule for target.
+CMakeFiles/integration.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\integration.dir\build.make CMakeFiles/integration.dir/clean
+.PHONY : CMakeFiles/integration.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/triangle.dir
 
 # All Build rule for target.
 CMakeFiles/triangle.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\triangle.dir\build.make CMakeFiles/triangle.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\triangle.dir\build.make CMakeFiles/triangle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=9,10 "Built target triangle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target triangle"
 .PHONY : CMakeFiles/triangle.dir/all
 
 # Build rule for subdir invocation for target.
@@ -116,7 +144,7 @@ CMakeFiles/triangle.dir/clean:
 CMakeFiles/plagiarize.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\plagiarize.dir\build.make CMakeFiles/plagiarize.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\plagiarize.dir\build.make CMakeFiles/plagiarize.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target plagiarize"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target plagiarize"
 .PHONY : CMakeFiles/plagiarize.dir/all
 
 # Build rule for subdir invocation for target.
@@ -142,7 +170,7 @@ CMakeFiles/plagiarize.dir/clean:
 CMakeFiles/yanghui.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\yanghui.dir\build.make CMakeFiles/yanghui.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\yanghui.dir\build.make CMakeFiles/yanghui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target yanghui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=13,14 "Built target yanghui"
 .PHONY : CMakeFiles/yanghui.dir/all
 
 # Build rule for subdir invocation for target.
@@ -168,7 +196,7 @@ CMakeFiles/yanghui.dir/clean:
 CMakeFiles/max.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\max.dir\build.make CMakeFiles/max.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\max.dir\build.make CMakeFiles/max.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target max"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target max"
 .PHONY : CMakeFiles/max.dir/all
 
 # Build rule for subdir invocation for target.
@@ -194,7 +222,7 @@ CMakeFiles/max.dir/clean:
 CMakeFiles/tile.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tile.dir\build.make CMakeFiles/tile.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tile.dir\build.make CMakeFiles/tile.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target tile"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\6-recursion\cmake-build-debug\CMakeFiles --progress-num=9,10 "Built target tile"
 .PHONY : CMakeFiles/tile.dir/all
 
 # Build rule for subdir invocation for target.
