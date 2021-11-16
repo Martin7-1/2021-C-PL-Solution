@@ -5,9 +5,10 @@
 #include <malloc.h>
 #include <math.h>
 
-double calculate(double* coef, int coefNumber, double x);
-double simpsonIntegration(int* coef, int coefNumber, double left, double right);
-double simpsonMethod(int* coef, int coefNumber, double left, double right);
+double calculate(double* coef, int coefNumber, double x, int p);
+double calculateInt(int coef[], int coefNumber, double x, int p);
+double simpsonIntegration(int* coef, int coefNumber, double left, double right, int p);
+double simpsonMethod(int* coef, int coefNumber, double left, double right, int p);
 
 int main() {
     int n, p;
@@ -31,11 +32,11 @@ int main() {
             temp--;
         }
         // F(b) - F(a)
-        ans = calculate(integrationCoef, n, b) - calculate(integrationCoef, n, a);
+        ans = calculate(integrationCoef, n, b, p) - calculate(integrationCoef, n, a, p);
         free(integrationCoef);
     } else {
         // adaptive simpson's method
-        ans = simpsonIntegration(coef, n, a, b);
+        ans = simpsonIntegration(coef, n, a, b, p);
     }
 
     printf("%lf", ans);
@@ -43,7 +44,7 @@ int main() {
     return 0;
 }
 
-double calculate(double* coef, int coefNumber, double x) {
+double calculate(double* coef, int coefNumber, double x, int p) {
     double ans = 0.0;
     double product = x;
 
@@ -52,23 +53,38 @@ double calculate(double* coef, int coefNumber, double x) {
         product *= x;
     }
 
-    return ans;
+    return pow(ans, p);
 }
 
-double simpsonIntegration(int* coef, int coefNumber, double left, double right) {
+double calculateInt(int coef[], int coefNumber, double x, int p) {
+    double ans = 0.0;
+    double product = 1;
+
+    for (int i = 0; i <= coefNumber; i++) {
+        ans += coef[i] * product;
+        product *= x;
+    }
+
+    return pow(ans, p);
+}
+
+double simpsonIntegration(int* coef, int coefNumber, double left, double right, int p) {
     double middle = (right + left) / 2.0;
-    double sl = simpsonMethod(coef, coefNumber, left, middle);
-    double sr = simpsonMethod(coef, coefNumber, middle, right);
-    double s = simpsonMethod(coef, coefNumber, left, right);
+    double sl = simpsonMethod(coef, coefNumber, left, middle, p);
+    double sr = simpsonMethod(coef, coefNumber, middle, right, p);
+    double s = simpsonMethod(coef, coefNumber, left, right, p);
     if (fabs(sl + sr - s) <= 15e-4) {
         return sl + sr +(sl + sr - s) / 15;
     } else {
-        return simpsonIntegration(coef, coefNumber, left, middle) + simpsonIntegration(coef, coefNumber, middle, right);
+        return simpsonIntegration(coef, coefNumber, left, middle, p) + simpsonIntegration(coef, coefNumber, middle, right, p);
     }
 }
 
-double simpsonMethod(int* coef, int coefNumber, double left, double right) {
+double simpsonMethod(int* coef, int coefNumber, double left, double right, int p) {
     // 用辛普森公式计算的值
     double middle = (right + left) / 2.0;
-    return (right - left) * (4 * calculate(coef, coefNumber, middle) + calculate(coef, coefNumber, left) + calculate(coef, coefNumber, right)) / 6;
+    double ans1 = 4 * calculateInt(coef, coefNumber, middle, p);
+    double ans2 = calculateInt(coef, coefNumber, left, p);
+    double ans3 = calculateInt(coef, coefNumber, right, p);
+    return (right - left) * (ans1 + ans2 + ans3) / 6;
 }
