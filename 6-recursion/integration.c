@@ -5,15 +5,15 @@
 #include <malloc.h>
 #include <math.h>
 
-double calculate(double* coef, int coefNumber, double x, int p);
+double calculate(double coef[], int coefNumber, double x, int p);
 double calculateInt(int coef[], int coefNumber, double x, int p);
-double simpsonIntegration(int* coef, int coefNumber, double left, double right, int p);
-double simpsonMethod(int* coef, int coefNumber, double left, double right, int p);
+double simpsonIntegration(int coef[], int coefNumber, double left, double right, int p);
+double simpsonMethod(int coef[], int coefNumber, double left, double right, int p);
 
 int main() {
     int n, p;
     scanf("%d %d", &n, &p);
-    int* coef = malloc((n+1) * sizeof(int));
+    int* coef = malloc((n + 1) * sizeof(int));
     for (int i = 0; i <= n; i++) {
         scanf("%d", &coef[i]);
     }
@@ -44,7 +44,7 @@ int main() {
     return 0;
 }
 
-double calculate(double* coef, int coefNumber, double x, int p) {
+double calculate(double coef[], int coefNumber, double x, int p) {
     double ans = 0.0;
     double product = x;
 
@@ -68,19 +68,19 @@ double calculateInt(int coef[], int coefNumber, double x, int p) {
     return pow(ans, p);
 }
 
-double simpsonIntegration(int* coef, int coefNumber, double left, double right, int p) {
+double simpsonIntegration(int coef[], int coefNumber, double left, double right, int p) {
     double middle = (right + left) / 2.0;
     double sl = simpsonMethod(coef, coefNumber, left, middle, p);
     double sr = simpsonMethod(coef, coefNumber, middle, right, p);
     double s = simpsonMethod(coef, coefNumber, left, right, p);
-    if (fabs(sl + sr - s) <= 15e-4) {
+    if (fabs(sl + sr - s) <= 15e-8) {
         return sl + sr +(sl + sr - s) / 15;
     } else {
         return simpsonIntegration(coef, coefNumber, left, middle, p) + simpsonIntegration(coef, coefNumber, middle, right, p);
     }
 }
 
-double simpsonMethod(int* coef, int coefNumber, double left, double right, int p) {
+double simpsonMethod(int coef[], int coefNumber, double left, double right, int p) {
     // 用辛普森公式计算的值
     double middle = (right + left) / 2.0;
     double ans1 = 4 * calculateInt(coef, coefNumber, middle, p);
