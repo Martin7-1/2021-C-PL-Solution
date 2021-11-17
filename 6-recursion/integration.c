@@ -4,9 +4,10 @@
 #include <stdio.h>
 #include <math.h>
 
-int coef[200];
-double integrationCoef[200];
+int coef[1000];
+double integrationCoef[1000];
 int coefNumber;
+const double deviation = 1e-5;
 
 double calculate(double x);
 double calculateInt(double x, int p);
@@ -14,8 +15,8 @@ double simpsonIntegration(double left, double right, int p, double deviation);
 double simpsonMethod(double left, double right, int p);
 
 int main() {
+    // 该方法在80分会遇到runtimeError，暂时还没解决
     int p;
-    double deviation = 1e-6;
     scanf("%d %d", &coefNumber, &p);
     for (int i = 0; i <= coefNumber; i++) {
         scanf("%d", &coef[i]);

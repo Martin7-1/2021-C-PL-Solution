@@ -6,6 +6,7 @@
 void drawTriangle(int n);
 
 int main() {
+    // 本题还没做完
     int n;
     scanf("%d", &n);
 
