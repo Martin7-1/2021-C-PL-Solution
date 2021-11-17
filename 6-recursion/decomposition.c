@@ -3,26 +3,42 @@
 //
 #include <stdio.h>
 
-void findDecomposition(int n);
+int arr[10005] = {1};
+int n;
+
+void findDecomposition(int x, int t);
+void consolePrint(int t);
 
 int main() {
-    int n;
     scanf("%d", &n);
-
-    findDecomposition(n);
+    findDecomposition(n, 1);
+    printf("%d", n);
     return 0;
 }
 
-void findDecomposition(int n) {
-    if (n == 0) {
-        return;
-    }
-    if (n == 1) {
-        printf("1\n");
-    } else {
-        for (int i = 1; i <= n; i++) {
-            printf("%d ", i);
-            findDecomposition(n - i);
+void findDecomposition(int x, int t) {
+    int i;
+
+    for (i = arr[t - 1]; i <= x; i++) {
+        if (i < n) {
+            arr[t] = i;
+            x -= i;
+            if (x == 0) {
+                // output
+                consolePrint(t);
+            } else {
+                // x > 0则继续递归
+                findDecomposition(x, t + 1);
+            }
+            // 回溯
+            x += i;
         }
     }
+}
+
+void consolePrint(int t) {
+    for (int i = 1; i < t; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("%d\n", arr[t]);
 }
