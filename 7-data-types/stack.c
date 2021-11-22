@@ -5,7 +5,7 @@
 #include <malloc.h>
 #include <string.h>
 
-char operation[10004][10];
+char** operation;
 // 用数组来模拟栈
 // 这里不用指针和malloc的原因是因为malloc需要运行时开辟
 // 而win下的栈空间太小，懒得编译调整栈大小了
@@ -22,18 +22,16 @@ int main() {
     int n;
     scanf("%d", &n);
     getchar();
-    // operation = malloc(n * sizeof(char*));
+    operation = malloc(n * sizeof(char*));
 
     for (int i = 0; i < n; i++) {
-        // operation[i] = malloc(10 * sizeof(char));
+        operation[i] = malloc(20 * sizeof(char));
         // 读取字符串
         scanf("%s", operation[i]);
         if (strcmp(operation[i], "pop") == 0) {
             // 执行pop操作
             char popElement = pop();
-            if (popElement != '\0') {
-                printf("%c\n", popElement);
-            } else {
+            if (popElement == '\0') {
                 printf("Empty\n");
             }
         } else if (strcmp(operation[i], "top") == 0) {
