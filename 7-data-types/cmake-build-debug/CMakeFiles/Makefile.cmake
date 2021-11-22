@@ -46,7 +46,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/pour.dir/DependInfo.cmake"
   "CMakeFiles/stack.dir/DependInfo.cmake"
   "CMakeFiles/wine.dir/DependInfo.cmake"
   "CMakeFiles/brackets.dir/DependInfo.cmake"
+  "CMakeFiles/max_diff.dir/DependInfo.cmake"
   )

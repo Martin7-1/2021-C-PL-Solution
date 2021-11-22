@@ -116,6 +116,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named pour
+
+# Build rule for target.
+pour: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 pour
+.PHONY : pour
+
+# fast build rule for target.
+pour/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pour.dir\build.make CMakeFiles/pour.dir/build
+.PHONY : pour/fast
+
+#=============================================================================
 # Target rules for targets named stack
 
 # Build rule for target.
@@ -154,6 +167,19 @@ brackets/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\brackets.dir\build.make CMakeFiles/brackets.dir/build
 .PHONY : brackets/fast
 
+#=============================================================================
+# Target rules for targets named max_diff
+
+# Build rule for target.
+max_diff: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 max_diff
+.PHONY : max_diff
+
+# fast build rule for target.
+max_diff/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\max_diff.dir\build.make CMakeFiles/max_diff.dir/build
+.PHONY : max_diff/fast
+
 brackets.obj: brackets.c.obj
 .PHONY : brackets.obj
 
@@ -177,6 +203,54 @@ brackets.s: brackets.c.s
 brackets.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\brackets.dir\build.make CMakeFiles/brackets.dir/brackets.c.s
 .PHONY : brackets.c.s
+
+max_diff.obj: max_diff.c.obj
+.PHONY : max_diff.obj
+
+# target to build an object file
+max_diff.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\max_diff.dir\build.make CMakeFiles/max_diff.dir/max_diff.c.obj
+.PHONY : max_diff.c.obj
+
+max_diff.i: max_diff.c.i
+.PHONY : max_diff.i
+
+# target to preprocess a source file
+max_diff.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\max_diff.dir\build.make CMakeFiles/max_diff.dir/max_diff.c.i
+.PHONY : max_diff.c.i
+
+max_diff.s: max_diff.c.s
+.PHONY : max_diff.s
+
+# target to generate assembly for a file
+max_diff.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\max_diff.dir\build.make CMakeFiles/max_diff.dir/max_diff.c.s
+.PHONY : max_diff.c.s
+
+pour.obj: pour.c.obj
+.PHONY : pour.obj
+
+# target to build an object file
+pour.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pour.dir\build.make CMakeFiles/pour.dir/pour.c.obj
+.PHONY : pour.c.obj
+
+pour.i: pour.c.i
+.PHONY : pour.i
+
+# target to preprocess a source file
+pour.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pour.dir\build.make CMakeFiles/pour.dir/pour.c.i
+.PHONY : pour.c.i
+
+pour.s: pour.c.s
+.PHONY : pour.s
+
+# target to generate assembly for a file
+pour.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pour.dir\build.make CMakeFiles/pour.dir/pour.c.s
+.PHONY : pour.c.s
 
 stack.obj: stack.c.obj
 .PHONY : stack.obj
@@ -235,11 +309,19 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... brackets
+	@echo ... max_diff
+	@echo ... pour
 	@echo ... stack
 	@echo ... wine
 	@echo ... brackets.obj
 	@echo ... brackets.i
 	@echo ... brackets.s
+	@echo ... max_diff.obj
+	@echo ... max_diff.i
+	@echo ... max_diff.s
+	@echo ... pour.obj
+	@echo ... pour.i
+	@echo ... pour.s
 	@echo ... stack.obj
 	@echo ... stack.i
 	@echo ... stack.s

@@ -13,6 +13,7 @@
 1. 3-for-a-while
 2. 5-function
 3. 6-recursion
+3. 7-data-types
 
 
 
