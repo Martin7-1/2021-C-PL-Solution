@@ -53,6 +53,42 @@
 					<DistClean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="wine">
+				<Option output="D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/wine.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/Makefile&quot;  VERBOSE=1 wine"/>
+					<CompileFile command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="wine/fast">
+				<Option output="D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/wine.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/Makefile&quot;  VERBOSE=1 wine/fast"/>
+					<CompileFile command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/mingw64/bin/mingw32-make.exe -f &quot;D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug"/>
 				<Option type="4"/>
@@ -76,6 +112,9 @@
 		</Build>
 		<Unit filename="D:/C-PL/2021-C-PL-Solution/7-data-types/stack.c">
 			<Option target="stack"/>
+		</Unit>
+		<Unit filename="D:/C-PL/2021-C-PL-Solution/7-data-types/wine.c">
+			<Option target="wine"/>
 		</Unit>
 		<Unit filename="D:/C-PL/2021-C-PL-Solution/7-data-types/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

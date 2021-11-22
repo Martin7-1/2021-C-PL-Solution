@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = D:\C-PL\2021-C-PL-Solution\7-data-types\cmake-build-debug
 
 # The main recursive "all" target.
 all: CMakeFiles/stack.dir/all
+all: CMakeFiles/wine.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,6 +72,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/stack.dir/clean
+clean: CMakeFiles/wine.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -98,6 +100,32 @@ stack: CMakeFiles/stack.dir/rule
 CMakeFiles/stack.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\stack.dir\build.make CMakeFiles/stack.dir/clean
 .PHONY : CMakeFiles/stack.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/wine.dir
+
+# All Build rule for target.
+CMakeFiles/wine.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\wine.dir\build.make CMakeFiles/wine.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\wine.dir\build.make CMakeFiles/wine.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\7-data-types\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target wine"
+.PHONY : CMakeFiles/wine.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/wine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\7-data-types\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/wine.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\7-data-types\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/wine.dir/rule
+
+# Convenience name for target.
+wine: CMakeFiles/wine.dir/rule
+.PHONY : wine
+
+# clean rule for target.
+CMakeFiles/wine.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\wine.dir\build.make CMakeFiles/wine.dir/clean
+.PHONY : CMakeFiles/wine.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

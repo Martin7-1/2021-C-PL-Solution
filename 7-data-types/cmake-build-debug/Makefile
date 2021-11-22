@@ -128,6 +128,19 @@ stack/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\stack.dir\build.make CMakeFiles/stack.dir/build
 .PHONY : stack/fast
 
+#=============================================================================
+# Target rules for targets named wine
+
+# Build rule for target.
+wine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wine
+.PHONY : wine
+
+# fast build rule for target.
+wine/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\wine.dir\build.make CMakeFiles/wine.dir/build
+.PHONY : wine/fast
+
 stack.obj: stack.c.obj
 .PHONY : stack.obj
 
@@ -152,6 +165,30 @@ stack.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\stack.dir\build.make CMakeFiles/stack.dir/stack.c.s
 .PHONY : stack.c.s
 
+wine.obj: wine.c.obj
+.PHONY : wine.obj
+
+# target to build an object file
+wine.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\wine.dir\build.make CMakeFiles/wine.dir/wine.c.obj
+.PHONY : wine.c.obj
+
+wine.i: wine.c.i
+.PHONY : wine.i
+
+# target to preprocess a source file
+wine.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\wine.dir\build.make CMakeFiles/wine.dir/wine.c.i
+.PHONY : wine.c.i
+
+wine.s: wine.c.s
+.PHONY : wine.s
+
+# target to generate assembly for a file
+wine.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\wine.dir\build.make CMakeFiles/wine.dir/wine.c.s
+.PHONY : wine.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +198,13 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... stack
+	@echo ... wine
 	@echo ... stack.obj
 	@echo ... stack.i
 	@echo ... stack.s
+	@echo ... wine.obj
+	@echo ... wine.i
+	@echo ... wine.s
 .PHONY : help
 
 
