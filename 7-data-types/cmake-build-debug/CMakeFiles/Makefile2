@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = D:\C-PL\2021-C-PL-Solution\7-data-types\cmake-build-debug
 # The main recursive "all" target.
 all: CMakeFiles/stack.dir/all
 all: CMakeFiles/wine.dir/all
+all: CMakeFiles/brackets.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,6 +74,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/stack.dir/clean
 clean: CMakeFiles/wine.dir/clean
+clean: CMakeFiles/brackets.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -82,7 +84,7 @@ clean: CMakeFiles/wine.dir/clean
 CMakeFiles/stack.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\stack.dir\build.make CMakeFiles/stack.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\stack.dir\build.make CMakeFiles/stack.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\7-data-types\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target stack"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\7-data-types\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target stack"
 .PHONY : CMakeFiles/stack.dir/all
 
 # Build rule for subdir invocation for target.
@@ -108,7 +110,7 @@ CMakeFiles/stack.dir/clean:
 CMakeFiles/wine.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\wine.dir\build.make CMakeFiles/wine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\wine.dir\build.make CMakeFiles/wine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\7-data-types\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target wine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\7-data-types\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target wine"
 .PHONY : CMakeFiles/wine.dir/all
 
 # Build rule for subdir invocation for target.
@@ -126,6 +128,32 @@ wine: CMakeFiles/wine.dir/rule
 CMakeFiles/wine.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\wine.dir\build.make CMakeFiles/wine.dir/clean
 .PHONY : CMakeFiles/wine.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/brackets.dir
+
+# All Build rule for target.
+CMakeFiles/brackets.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\brackets.dir\build.make CMakeFiles/brackets.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\brackets.dir\build.make CMakeFiles/brackets.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\7-data-types\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target brackets"
+.PHONY : CMakeFiles/brackets.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/brackets.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\7-data-types\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/brackets.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\7-data-types\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/brackets.dir/rule
+
+# Convenience name for target.
+brackets: CMakeFiles/brackets.dir/rule
+.PHONY : brackets
+
+# clean rule for target.
+CMakeFiles/brackets.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\brackets.dir\build.make CMakeFiles/brackets.dir/clean
+.PHONY : CMakeFiles/brackets.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

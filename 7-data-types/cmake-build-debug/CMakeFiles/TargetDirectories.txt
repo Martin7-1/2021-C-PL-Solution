@@ -1,4 +1,5 @@
 D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/CMakeFiles/stack.dir
 D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/CMakeFiles/wine.dir
 D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/CMakeFiles/brackets.dir
 D:/C-PL/2021-C-PL-Solution/7-data-types/cmake-build-debug/CMakeFiles/rebuild_cache.dir

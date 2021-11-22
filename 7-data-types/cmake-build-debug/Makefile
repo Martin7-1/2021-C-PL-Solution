@@ -141,6 +141,43 @@ wine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\wine.dir\build.make CMakeFiles/wine.dir/build
 .PHONY : wine/fast
 
+#=============================================================================
+# Target rules for targets named brackets
+
+# Build rule for target.
+brackets: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 brackets
+.PHONY : brackets
+
+# fast build rule for target.
+brackets/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\brackets.dir\build.make CMakeFiles/brackets.dir/build
+.PHONY : brackets/fast
+
+brackets.obj: brackets.c.obj
+.PHONY : brackets.obj
+
+# target to build an object file
+brackets.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\brackets.dir\build.make CMakeFiles/brackets.dir/brackets.c.obj
+.PHONY : brackets.c.obj
+
+brackets.i: brackets.c.i
+.PHONY : brackets.i
+
+# target to preprocess a source file
+brackets.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\brackets.dir\build.make CMakeFiles/brackets.dir/brackets.c.i
+.PHONY : brackets.c.i
+
+brackets.s: brackets.c.s
+.PHONY : brackets.s
+
+# target to generate assembly for a file
+brackets.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\brackets.dir\build.make CMakeFiles/brackets.dir/brackets.c.s
+.PHONY : brackets.c.s
+
 stack.obj: stack.c.obj
 .PHONY : stack.obj
 
@@ -197,8 +234,12 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... brackets
 	@echo ... stack
 	@echo ... wine
+	@echo ... brackets.obj
+	@echo ... brackets.i
+	@echo ... brackets.s
 	@echo ... stack.obj
 	@echo ... stack.i
 	@echo ... stack.s
