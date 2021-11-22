@@ -56,6 +56,10 @@ int main() {
         getchar();
     }
 
+    for (int i = 0; i < n; i++) {
+        free(operation[i]);
+    }
+    free(operation);
     return 0;
 }
 
