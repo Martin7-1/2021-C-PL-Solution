@@ -8,15 +8,14 @@ int coef[1000];
 double integrationCoef[1000];
 int coefNumber;
 const double deviation = 1e-5;
+int p;
 
 double calculate(double x);
-double calculateInt(double x, int p);
-double simpsonIntegration(double left, double right, int p, double deviation);
-double simpsonMethod(double left, double right, int p);
+double f(double x);
+double simpsonIntegration(double left, double right, double ans, double deviation, int step);
+double simpsonMethod(double left, double right);
 
 int main() {
-    // 该方法在80分会遇到runtimeError，暂时还没解决
-    int p;
     scanf("%d %d", &coefNumber, &p);
     for (int i = 0; i <= coefNumber; i++) {
         scanf("%d", &coef[i]);
@@ -38,7 +37,7 @@ int main() {
         ans = calculate(b) - calculate(a);
     } else {
         // adaptive simpson's method
-        ans = simpsonIntegration(a, b, p, deviation);
+        ans = simpsonIntegration(a, b, simpsonMethod(a, b), deviation, 12);
     }
 
     printf("%lf", ans);
@@ -57,7 +56,7 @@ double calculate(double x) {
     return ans;
 }
 
-double calculateInt(double x, int p) {
+double f(double x) {
     double ans = 0.0;
     double product = 1;
 
@@ -69,24 +68,20 @@ double calculateInt(double x, int p) {
     return pow(ans, p);
 }
 
-double simpsonIntegration(double left, double right, int p, double deviation) {
-    double middle = (right + left) / 2.0;
-    double sl = simpsonMethod(left, middle, p);
-    double sr = simpsonMethod(middle, right, p);
-    double s = simpsonMethod(left, right, p);
-    if (fabs(sl + sr - s) <= 15 * deviation) {
-        return sl + sr + (sl + sr - s) / 15;
+double simpsonIntegration(double left, double right, double ans, double eqs, int step) {
+    double mid = (right + left) / 2.0;
+    double fl = simpsonMethod(left, mid);
+    double fr = simpsonMethod(mid, right);
+    if (fabs(fl + fr - ans) <= 15 * eqs || step < 0) {
+        return fl + fr + (fl + fr - ans) / 15;
     } else {
         // 误差除2
-        return simpsonIntegration(left, middle, p, deviation / 2) + simpsonIntegration(middle, right, p, deviation / 2);
+        return simpsonIntegration(left, mid, fl, eqs / 2, step - 1) + simpsonIntegration(mid, right, fr, eqs / 2, step - 1);
     }
 }
 
-double simpsonMethod(double left, double right, int p) {
+double simpsonMethod(double left, double right) {
     // 用辛普森公式计算的值
     double middle = (right + left) / 2.0;
-    double ans1 = 4 * calculateInt(middle, p);
-    double ans2 = calculateInt(left, p);
-    double ans3 = calculateInt(right, p);
-    return (right - left) * (ans1 + ans2 + ans3) / 6;
+    return (right - left) * (4 * f(middle) + f(left) + f(right)) / 6;
 }
