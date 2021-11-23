@@ -181,6 +181,19 @@ max_diff/fast:
 .PHONY : max_diff/fast
 
 #=============================================================================
+# Target rules for targets named three_view
+
+# Build rule for target.
+three_view: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 three_view
+.PHONY : three_view
+
+# fast build rule for target.
+three_view/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\three_view.dir\build.make CMakeFiles/three_view.dir/build
+.PHONY : three_view/fast
+
+#=============================================================================
 # Target rules for targets named max_diff_another
 
 # Build rule for target.
@@ -313,6 +326,30 @@ stack.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\stack.dir\build.make CMakeFiles/stack.dir/stack.c.s
 .PHONY : stack.c.s
 
+three_view.obj: three_view.c.obj
+.PHONY : three_view.obj
+
+# target to build an object file
+three_view.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\three_view.dir\build.make CMakeFiles/three_view.dir/three_view.c.obj
+.PHONY : three_view.c.obj
+
+three_view.i: three_view.c.i
+.PHONY : three_view.i
+
+# target to preprocess a source file
+three_view.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\three_view.dir\build.make CMakeFiles/three_view.dir/three_view.c.i
+.PHONY : three_view.c.i
+
+three_view.s: three_view.c.s
+.PHONY : three_view.s
+
+# target to generate assembly for a file
+three_view.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\three_view.dir\build.make CMakeFiles/three_view.dir/three_view.c.s
+.PHONY : three_view.c.s
+
 wine.obj: wine.c.obj
 .PHONY : wine.obj
 
@@ -350,6 +387,7 @@ help:
 	@echo ... max_diff_another
 	@echo ... pour
 	@echo ... stack
+	@echo ... three_view
 	@echo ... wine
 	@echo ... brackets.obj
 	@echo ... brackets.i
@@ -366,6 +404,9 @@ help:
 	@echo ... stack.obj
 	@echo ... stack.i
 	@echo ... stack.s
+	@echo ... three_view.obj
+	@echo ... three_view.i
+	@echo ... three_view.s
 	@echo ... wine.obj
 	@echo ... wine.i
 	@echo ... wine.s
