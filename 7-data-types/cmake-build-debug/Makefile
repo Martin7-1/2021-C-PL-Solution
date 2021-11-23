@@ -180,6 +180,19 @@ max_diff/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\max_diff.dir\build.make CMakeFiles/max_diff.dir/build
 .PHONY : max_diff/fast
 
+#=============================================================================
+# Target rules for targets named max_diff_another
+
+# Build rule for target.
+max_diff_another: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 max_diff_another
+.PHONY : max_diff_another
+
+# fast build rule for target.
+max_diff_another/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\max_diff_another.dir\build.make CMakeFiles/max_diff_another.dir/build
+.PHONY : max_diff_another/fast
+
 brackets.obj: brackets.c.obj
 .PHONY : brackets.obj
 
@@ -227,6 +240,30 @@ max_diff.s: max_diff.c.s
 max_diff.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\max_diff.dir\build.make CMakeFiles/max_diff.dir/max_diff.c.s
 .PHONY : max_diff.c.s
+
+max_diff_another.obj: max_diff_another.c.obj
+.PHONY : max_diff_another.obj
+
+# target to build an object file
+max_diff_another.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\max_diff_another.dir\build.make CMakeFiles/max_diff_another.dir/max_diff_another.c.obj
+.PHONY : max_diff_another.c.obj
+
+max_diff_another.i: max_diff_another.c.i
+.PHONY : max_diff_another.i
+
+# target to preprocess a source file
+max_diff_another.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\max_diff_another.dir\build.make CMakeFiles/max_diff_another.dir/max_diff_another.c.i
+.PHONY : max_diff_another.c.i
+
+max_diff_another.s: max_diff_another.c.s
+.PHONY : max_diff_another.s
+
+# target to generate assembly for a file
+max_diff_another.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\max_diff_another.dir\build.make CMakeFiles/max_diff_another.dir/max_diff_another.c.s
+.PHONY : max_diff_another.c.s
 
 pour.obj: pour.c.obj
 .PHONY : pour.obj
@@ -310,6 +347,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... brackets
 	@echo ... max_diff
+	@echo ... max_diff_another
 	@echo ... pour
 	@echo ... stack
 	@echo ... wine
@@ -319,6 +357,9 @@ help:
 	@echo ... max_diff.obj
 	@echo ... max_diff.i
 	@echo ... max_diff.s
+	@echo ... max_diff_another.obj
+	@echo ... max_diff_another.i
+	@echo ... max_diff_another.s
 	@echo ... pour.obj
 	@echo ... pour.i
 	@echo ... pour.s

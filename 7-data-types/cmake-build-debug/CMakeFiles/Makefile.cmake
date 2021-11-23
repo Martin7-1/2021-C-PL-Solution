@@ -51,4 +51,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/wine.dir/DependInfo.cmake"
   "CMakeFiles/brackets.dir/DependInfo.cmake"
   "CMakeFiles/max_diff.dir/DependInfo.cmake"
+  "CMakeFiles/max_diff_another.dir/DependInfo.cmake"
   )
