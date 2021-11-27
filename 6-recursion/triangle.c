@@ -3,19 +3,40 @@
 //
 #include <stdio.h>
 
-void drawTriangle(int n);
+char ans[2010][3010];
+
+void solve(int n, int x, int y);
 
 int main() {
-    // 本题还没做完
     int n;
     scanf("%d", &n);
 
-    drawTriangle(n);
+    for (int i = 1; i <= (1 << n); i++) {
+        for (int j = 1; j <= (1 << (n+1)); j++) {
+            ans[i][j] = ' ';
+        }
+    }
+
+    solve(n, 1, 1);
+    for (int i = 1; i <= (1 << n); i++) {
+        for (int j = 1; j <= (1 << (n+1)); j++) {
+            printf("%c", ans[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
 }
 
-void drawTriangle(int n) {
+void solve(int n, int x, int y) {
     if (n == 1) {
-        printf(" /\\\n");
-        printf("/__\\\n");
+        ans[x][y+1] = ans[x+1][y] = '/';
+        ans[x][y+2] = ans[x+1][y+3] = '\\';
+        ans[x+1][y+1] = ans[x+1][y+2] = '_';
+        return;
     }
+
+    solve(n - 1, x, y + (1 << (n - 1)));
+    solve(n - 1, x + (1 << (n - 1)), y);
+    solve(n - 1, x + (1 << (n - 1)), y + (1 << n));
 }

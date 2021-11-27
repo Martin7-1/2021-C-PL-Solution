@@ -2,8 +2,12 @@
 // Created by Zyi on 2021/11/22.
 //
 #include <stdio.h>
+#include <stdbool.h>
 
-int capacity[5];
+long capacity[5];
+
+bool remainOne(long a0, long b0, long c0);
+bool down(long a0, long b0, long c0);
 
 int main() {
     int k;
@@ -22,13 +26,59 @@ int main() {
         // 总容量不相符
         printf("No");
     } else if (a0 == capacity[0] && b0 == capacity[1] && c0 == capacity[2]) {
+        // 等于原来的状态，只需要0步
         printf("Yes");
+    } else if (remainOne(a0, b0, c0)) {
+        // 全部移到一个杯子中，最多需要两步
+        if (k >= 2) {
+            printf("Yes");
+        } else {
+            printf("No");
+        }
     } else {
-        // 只有一种情况可以实现，就是目标杯子中的容量 = 某n个杯子的和
-        // 只需讨论一个杯子，其他杯子的情况是相似的
         int step = 0;
         if (a0 == capacity[0] + capacity[1]) {
-            // 把b倒入a
+            capacity[0] += capacity[1];
+            capacity[1] = 0;
+            step++;
+            if (down(a0, b0, c0)) {
+                if (k >= 1) {
+                    printf("Yes");
+                } else {
+                    printf("No");
+                }
+            } else {
+                // 还未完成说明只需要移动c到b即可
+                if (k >= 2) {
+                    printf("Yes");
+                } else {
+                    printf("No");
+                }
+            }
         }
     }
+
+    return 0;
+}
+
+bool remainOne(long a0, long b0, long c0) {
+    if (a0 == 0) {
+        if (b0 == 0 && c0 != 0) {
+            return true;
+        } else if (c0 == 0 && b0 != 0) {
+            return false;
+        }
+    } else if (b0 == 0) {
+        if (c0 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    return false;
+}
+
+bool down(long a0, long b0, long c0) {
+    return capacity[0] == a0 && capacity[1] == b0 && capacity[2] == c0;
 }
