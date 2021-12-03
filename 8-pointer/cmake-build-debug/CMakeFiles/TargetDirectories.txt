@@ -1,3 +1,4 @@
 D:/C-PL/2021-C-PL-Solution/8-pointer/cmake-build-debug/CMakeFiles/split.dir
 D:/C-PL/2021-C-PL-Solution/8-pointer/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/C-PL/2021-C-PL-Solution/8-pointer/cmake-build-debug/CMakeFiles/substr.dir
 D:/C-PL/2021-C-PL-Solution/8-pointer/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -128,6 +128,19 @@ split/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\split.dir\build.make CMakeFiles/split.dir/build
 .PHONY : split/fast
 
+#=============================================================================
+# Target rules for targets named substr
+
+# Build rule for target.
+substr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 substr
+.PHONY : substr
+
+# fast build rule for target.
+substr/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\substr.dir\build.make CMakeFiles/substr.dir/build
+.PHONY : substr/fast
+
 split.obj: split.c.obj
 .PHONY : split.obj
 
@@ -152,6 +165,30 @@ split.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\split.dir\build.make CMakeFiles/split.dir/split.c.s
 .PHONY : split.c.s
 
+substr.obj: substr.c.obj
+.PHONY : substr.obj
+
+# target to build an object file
+substr.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\substr.dir\build.make CMakeFiles/substr.dir/substr.c.obj
+.PHONY : substr.c.obj
+
+substr.i: substr.c.i
+.PHONY : substr.i
+
+# target to preprocess a source file
+substr.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\substr.dir\build.make CMakeFiles/substr.dir/substr.c.i
+.PHONY : substr.c.i
+
+substr.s: substr.c.s
+.PHONY : substr.s
+
+# target to generate assembly for a file
+substr.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\substr.dir\build.make CMakeFiles/substr.dir/substr.c.s
+.PHONY : substr.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +198,13 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... split
+	@echo ... substr
 	@echo ... split.obj
 	@echo ... split.i
 	@echo ... split.s
+	@echo ... substr.obj
+	@echo ... substr.i
+	@echo ... substr.s
 .PHONY : help
 
 
