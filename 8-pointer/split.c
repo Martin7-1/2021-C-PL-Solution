@@ -43,7 +43,7 @@ int main() {
     dicSort(ans, ansLength);
     for (int i = 0; i < ansLength; i++) {
         printf("%s\n", *(ans + i));
-        free(ans[i]);
+        free(*(ans + i));
     }
 
     free(ans);

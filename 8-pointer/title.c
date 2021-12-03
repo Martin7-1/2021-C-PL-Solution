@@ -10,10 +10,10 @@ int strlen(const char* str);
 bool isCap(char letter);
 
 int main() {
-    char** words = malloc(10000 * sizeof(char*));
+    char** words = (char**) malloc(10000 * sizeof(char*));
     int len = 0;
     do {
-        *(words + len) = malloc(200 * sizeof(char));
+        *(words + len) = (char*) malloc(200 * sizeof(char));
         scanf("%s", *(words + len));
         len++;
     } while (getchar() != '\n');
