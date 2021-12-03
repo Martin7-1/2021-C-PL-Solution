@@ -64,6 +64,8 @@ CMAKE_BINARY_DIR = D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug
 # The main recursive "all" target.
 all: CMakeFiles/split.dir/all
 all: CMakeFiles/substr.dir/all
+all: CMakeFiles/interpreter.dir/all
+all: CMakeFiles/title.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,6 +75,8 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/split.dir/clean
 clean: CMakeFiles/substr.dir/clean
+clean: CMakeFiles/interpreter.dir/clean
+clean: CMakeFiles/title.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -82,7 +86,7 @@ clean: CMakeFiles/substr.dir/clean
 CMakeFiles/split.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\split.dir\build.make CMakeFiles/split.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\split.dir\build.make CMakeFiles/split.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target split"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target split"
 .PHONY : CMakeFiles/split.dir/all
 
 # Build rule for subdir invocation for target.
@@ -108,7 +112,7 @@ CMakeFiles/split.dir/clean:
 CMakeFiles/substr.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\substr.dir\build.make CMakeFiles/substr.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\substr.dir\build.make CMakeFiles/substr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target substr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target substr"
 .PHONY : CMakeFiles/substr.dir/all
 
 # Build rule for subdir invocation for target.
@@ -126,6 +130,58 @@ substr: CMakeFiles/substr.dir/rule
 CMakeFiles/substr.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\substr.dir\build.make CMakeFiles/substr.dir/clean
 .PHONY : CMakeFiles/substr.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/interpreter.dir
+
+# All Build rule for target.
+CMakeFiles/interpreter.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\interpreter.dir\build.make CMakeFiles/interpreter.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\interpreter.dir\build.make CMakeFiles/interpreter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target interpreter"
+.PHONY : CMakeFiles/interpreter.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/interpreter.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/interpreter.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/interpreter.dir/rule
+
+# Convenience name for target.
+interpreter: CMakeFiles/interpreter.dir/rule
+.PHONY : interpreter
+
+# clean rule for target.
+CMakeFiles/interpreter.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\interpreter.dir\build.make CMakeFiles/interpreter.dir/clean
+.PHONY : CMakeFiles/interpreter.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/title.dir
+
+# All Build rule for target.
+CMakeFiles/title.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\title.dir\build.make CMakeFiles/title.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\title.dir\build.make CMakeFiles/title.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target title"
+.PHONY : CMakeFiles/title.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/title.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/title.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/title.dir/rule
+
+# Convenience name for target.
+title: CMakeFiles/title.dir/rule
+.PHONY : title
+
+# clean rule for target.
+CMakeFiles/title.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\title.dir\build.make CMakeFiles/title.dir/clean
+.PHONY : CMakeFiles/title.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

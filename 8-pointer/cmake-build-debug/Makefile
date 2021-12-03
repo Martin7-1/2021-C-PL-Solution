@@ -141,6 +141,56 @@ substr/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\substr.dir\build.make CMakeFiles/substr.dir/build
 .PHONY : substr/fast
 
+#=============================================================================
+# Target rules for targets named interpreter
+
+# Build rule for target.
+interpreter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 interpreter
+.PHONY : interpreter
+
+# fast build rule for target.
+interpreter/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\interpreter.dir\build.make CMakeFiles/interpreter.dir/build
+.PHONY : interpreter/fast
+
+#=============================================================================
+# Target rules for targets named title
+
+# Build rule for target.
+title: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 title
+.PHONY : title
+
+# fast build rule for target.
+title/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\title.dir\build.make CMakeFiles/title.dir/build
+.PHONY : title/fast
+
+interpreter.obj: interpreter.c.obj
+.PHONY : interpreter.obj
+
+# target to build an object file
+interpreter.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\interpreter.dir\build.make CMakeFiles/interpreter.dir/interpreter.c.obj
+.PHONY : interpreter.c.obj
+
+interpreter.i: interpreter.c.i
+.PHONY : interpreter.i
+
+# target to preprocess a source file
+interpreter.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\interpreter.dir\build.make CMakeFiles/interpreter.dir/interpreter.c.i
+.PHONY : interpreter.c.i
+
+interpreter.s: interpreter.c.s
+.PHONY : interpreter.s
+
+# target to generate assembly for a file
+interpreter.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\interpreter.dir\build.make CMakeFiles/interpreter.dir/interpreter.c.s
+.PHONY : interpreter.c.s
+
 split.obj: split.c.obj
 .PHONY : split.obj
 
@@ -189,6 +239,30 @@ substr.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\substr.dir\build.make CMakeFiles/substr.dir/substr.c.s
 .PHONY : substr.c.s
 
+title.obj: title.c.obj
+.PHONY : title.obj
+
+# target to build an object file
+title.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\title.dir\build.make CMakeFiles/title.dir/title.c.obj
+.PHONY : title.c.obj
+
+title.i: title.c.i
+.PHONY : title.i
+
+# target to preprocess a source file
+title.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\title.dir\build.make CMakeFiles/title.dir/title.c.i
+.PHONY : title.c.i
+
+title.s: title.c.s
+.PHONY : title.s
+
+# target to generate assembly for a file
+title.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\title.dir\build.make CMakeFiles/title.dir/title.c.s
+.PHONY : title.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -197,14 +271,22 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... interpreter
 	@echo ... split
 	@echo ... substr
+	@echo ... title
+	@echo ... interpreter.obj
+	@echo ... interpreter.i
+	@echo ... interpreter.s
 	@echo ... split.obj
 	@echo ... split.i
 	@echo ... split.s
 	@echo ... substr.obj
 	@echo ... substr.i
 	@echo ... substr.s
+	@echo ... title.obj
+	@echo ... title.i
+	@echo ... title.s
 .PHONY : help
 
 

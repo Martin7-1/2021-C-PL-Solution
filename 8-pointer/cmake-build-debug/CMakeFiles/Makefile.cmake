@@ -48,4 +48,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/split.dir/DependInfo.cmake"
   "CMakeFiles/substr.dir/DependInfo.cmake"
+  "CMakeFiles/interpreter.dir/DependInfo.cmake"
+  "CMakeFiles/title.dir/DependInfo.cmake"
   )
