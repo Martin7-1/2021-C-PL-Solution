@@ -2,7 +2,6 @@
 // Created by Zyi on 2021/11/22.
 //
 #include <stdio.h>
-#include <stdbool.h>
 
 long a0;
 long b0;
