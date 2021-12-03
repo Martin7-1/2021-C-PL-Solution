@@ -25,24 +25,24 @@ int main() {
     int ansLength = 0;
     while (index < len) {
         int endIndex = index;
-        while (string[endIndex] != splitChar) {
+        while (*(string + endIndex) != splitChar && endIndex < len) {
             endIndex++;
         }
-        ans[ansIndex] = malloc(100 * sizeof(char));
+        *(ans + ansIndex) = malloc(100 * sizeof(char));
         for (int i = index; i < endIndex; i++) {
-            ans[ansIndex][i - index] = string[i];
+            *(*(ans + ansIndex) + i - index) = *(string + i);
         }
         // 结束标志
-        ans[ansIndex][endIndex] = '\0';
+        *(*(ans + ansIndex) + endIndex - index) = '\0';
         ansIndex++;
-        index = endIndex;
+        index = endIndex + 1;
         ansLength++;
     }
 
     // 按照字典序排序
     dicSort(ans, ansLength);
     for (int i = 0; i < ansLength; i++) {
-        printf("%s\n", ans[i]);
+        printf("%s\n", *(ans + i));
         free(ans[i]);
     }
 
@@ -56,10 +56,10 @@ void dicSort(char** strings, int len) {
     char* temp = malloc(100 * sizeof(char));
     for (int i = 0; i < len - 1; i++) {
         for (int j = 0; j < len - i - 1; j++) {
-            if (strcmp(strings[j], strings[j+1]) > 0) {
-                strcpy(temp, strings[j]);
-                strcpy(strings[j], strings[j+1]);
-                strcpy(strings[j+1], temp);
+            if (strcmp(*(strings + j), *(strings + j + 1)) > 0) {
+                strcpy(temp, *(strings + j));
+                strcpy(*(strings + j), *(strings + j + 1));
+                strcpy(*(strings + j + 1), temp);
             }
         }
     }
