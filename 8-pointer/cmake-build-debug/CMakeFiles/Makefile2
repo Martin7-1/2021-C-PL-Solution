@@ -66,6 +66,7 @@ all: CMakeFiles/split.dir/all
 all: CMakeFiles/substr.dir/all
 all: CMakeFiles/interpreter.dir/all
 all: CMakeFiles/title.dir/all
+all: CMakeFiles/stringcat.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -77,6 +78,7 @@ clean: CMakeFiles/split.dir/clean
 clean: CMakeFiles/substr.dir/clean
 clean: CMakeFiles/interpreter.dir/clean
 clean: CMakeFiles/title.dir/clean
+clean: CMakeFiles/stringcat.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -112,7 +114,7 @@ CMakeFiles/split.dir/clean:
 CMakeFiles/substr.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\substr.dir\build.make CMakeFiles/substr.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\substr.dir\build.make CMakeFiles/substr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target substr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target substr"
 .PHONY : CMakeFiles/substr.dir/all
 
 # Build rule for subdir invocation for target.
@@ -164,7 +166,7 @@ CMakeFiles/interpreter.dir/clean:
 CMakeFiles/title.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\title.dir\build.make CMakeFiles/title.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\title.dir\build.make CMakeFiles/title.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target title"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles --progress-num=9,10 "Built target title"
 .PHONY : CMakeFiles/title.dir/all
 
 # Build rule for subdir invocation for target.
@@ -182,6 +184,32 @@ title: CMakeFiles/title.dir/rule
 CMakeFiles/title.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\title.dir\build.make CMakeFiles/title.dir/clean
 .PHONY : CMakeFiles/title.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/stringcat.dir
+
+# All Build rule for target.
+CMakeFiles/stringcat.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stringcat.dir\build.make CMakeFiles/stringcat.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stringcat.dir\build.make CMakeFiles/stringcat.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target stringcat"
+.PHONY : CMakeFiles/stringcat.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/stringcat.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/stringcat.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\8-pointer\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/stringcat.dir/rule
+
+# Convenience name for target.
+stringcat: CMakeFiles/stringcat.dir/rule
+.PHONY : stringcat
+
+# clean rule for target.
+CMakeFiles/stringcat.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stringcat.dir\build.make CMakeFiles/stringcat.dir/clean
+.PHONY : CMakeFiles/stringcat.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

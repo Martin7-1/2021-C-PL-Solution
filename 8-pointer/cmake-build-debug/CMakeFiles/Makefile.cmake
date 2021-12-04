@@ -50,4 +50,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/substr.dir/DependInfo.cmake"
   "CMakeFiles/interpreter.dir/DependInfo.cmake"
   "CMakeFiles/title.dir/DependInfo.cmake"
+  "CMakeFiles/stringcat.dir/DependInfo.cmake"
   )

@@ -167,6 +167,19 @@ title/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\title.dir\build.make CMakeFiles/title.dir/build
 .PHONY : title/fast
 
+#=============================================================================
+# Target rules for targets named stringcat
+
+# Build rule for target.
+stringcat: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 stringcat
+.PHONY : stringcat
+
+# fast build rule for target.
+stringcat/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stringcat.dir\build.make CMakeFiles/stringcat.dir/build
+.PHONY : stringcat/fast
+
 interpreter.obj: interpreter.c.obj
 .PHONY : interpreter.obj
 
@@ -214,6 +227,30 @@ split.s: split.c.s
 split.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\split.dir\build.make CMakeFiles/split.dir/split.c.s
 .PHONY : split.c.s
+
+stringcat.obj: stringcat.c.obj
+.PHONY : stringcat.obj
+
+# target to build an object file
+stringcat.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stringcat.dir\build.make CMakeFiles/stringcat.dir/stringcat.c.obj
+.PHONY : stringcat.c.obj
+
+stringcat.i: stringcat.c.i
+.PHONY : stringcat.i
+
+# target to preprocess a source file
+stringcat.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stringcat.dir\build.make CMakeFiles/stringcat.dir/stringcat.c.i
+.PHONY : stringcat.c.i
+
+stringcat.s: stringcat.c.s
+.PHONY : stringcat.s
+
+# target to generate assembly for a file
+stringcat.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stringcat.dir\build.make CMakeFiles/stringcat.dir/stringcat.c.s
+.PHONY : stringcat.c.s
 
 substr.obj: substr.c.obj
 .PHONY : substr.obj
@@ -273,6 +310,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... interpreter
 	@echo ... split
+	@echo ... stringcat
 	@echo ... substr
 	@echo ... title
 	@echo ... interpreter.obj
@@ -281,6 +319,9 @@ help:
 	@echo ... split.obj
 	@echo ... split.i
 	@echo ... split.s
+	@echo ... stringcat.obj
+	@echo ... stringcat.i
+	@echo ... stringcat.s
 	@echo ... substr.obj
 	@echo ... substr.i
 	@echo ... substr.s
