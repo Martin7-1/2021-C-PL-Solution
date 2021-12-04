@@ -3,39 +3,47 @@
 //
 #include <stdio.h>
 #include <malloc.h>
-#include <string.h>
 #include <stdbool.h>
 
-char* s;
-char* t;
 int ansLen = 0;
-int* ans;
 
-void findIndex();
+void findIndex(int sLen, int tLen, const char* s, const char* t, int* ans);
+int strlen(const char* str);
 
 int main() {
-    s = malloc(1000005 * sizeof(char));
-    t = malloc(1000005 * sizeof(char));
-    ans = malloc(1000005 * sizeof(int));
+    char* s = malloc(100005 * sizeof(char));
+    char* t = malloc(100005 * sizeof(char));
+    int* ans = malloc(100005 * sizeof(int));
     scanf("%s", s);
     getchar();
     scanf("%s", t);
+    int sLen = strlen(s);
+    int tLen = strlen(t);
 
-    findIndex();
+    findIndex(sLen, tLen, s, t, ans);
 
     for (int i = 0; i < ansLen; i++) {
         printf("%d ", *(ans + i));
     }
+
     free(s);
     free(t);
     free(ans);
     return 0;
 }
 
-void findIndex() {
+int strlen(const char* str) {
+    int len = 0;
+
+    while (*(str + len) != '\0') {
+        len++;
+    }
+
+    return len;
+}
+
+void findIndex(int sLen, int tLen, const char* s, const char* t, int* ans) {
     int i = 0;
-    int sLen = strlen(s);
-    int tLen = strlen(t);
 
     while (i < sLen) {
         if (*(s + i) == *t) {
@@ -51,12 +59,8 @@ void findIndex() {
             if (flag) {
                 *(ans + ansLen) = i;
                 ansLen++;
-                i += tLen;
-            } else {
-                i++;
             }
-        } else {
-            i++;
         }
+        i++;
     }
 }

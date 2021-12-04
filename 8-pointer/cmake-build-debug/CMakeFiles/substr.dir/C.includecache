@@ -11,8 +11,6 @@ stdio.h
 -
 malloc.h
 -
-string.h
--
 stdbool.h
 -
 
