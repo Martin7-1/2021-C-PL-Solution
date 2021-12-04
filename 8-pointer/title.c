@@ -10,22 +10,13 @@ int strlen(const char* str);
 bool isCap(char letter);
 
 int main() {
-    char** words = (char**) malloc(10000 * sizeof(char*));
-    int len = 0;
-    do {
-        *(words + len) = (char*) malloc(200 * sizeof(char));
-        scanf("%s", *(words + len));
-        len++;
-    } while (getchar() != '\n');
+    char* title = malloc(4 * 1024 * sizeof(char));
+    gets(title);
 
-    for (int i = 0; i < len; i++) {
-        capitalTitle(*(words + i));
-    }
-    for (int i = 0; i < len; i++) {
-        printf("%s ", *(words + i));
-        free(*(words + i));
-    }
-    free(words);
+    capitalTitle(title);
+
+    printf("%s", title);
+    free(title);
     return 0;
 }
 
@@ -46,7 +37,7 @@ void capitalTitle(char* title) {
         if (*(title + i) == ' ') {
             // 空格的后一格
             if (!isCapital) {
-                *(title + i) +=  'A' - 'a';
+                *(title + i + 1) += 'A' - 'a';
             }
         } else {
             if (isCapital) {

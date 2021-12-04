@@ -3,7 +3,6 @@
 //
 #include <stdio.h>
 #include <malloc.h>
-#include <stdbool.h>
 
 void mystrcat(char* str1, char* str2);
 int mystrlen(const char* str);
