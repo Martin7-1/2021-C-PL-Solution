@@ -128,6 +128,19 @@ linkedList/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/build
 .PHONY : linkedList/fast
 
+#=============================================================================
+# Target rules for targets named stackPour
+
+# Build rule for target.
+stackPour: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 stackPour
+.PHONY : stackPour
+
+# fast build rule for target.
+stackPour/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stackPour.dir\build.make CMakeFiles/stackPour.dir/build
+.PHONY : stackPour/fast
+
 linkedList.obj: linkedList.c.obj
 .PHONY : linkedList.obj
 
@@ -152,6 +165,30 @@ linkedList.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/linkedList.c.s
 .PHONY : linkedList.c.s
 
+stackPour.obj: stackPour.c.obj
+.PHONY : stackPour.obj
+
+# target to build an object file
+stackPour.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stackPour.dir\build.make CMakeFiles/stackPour.dir/stackPour.c.obj
+.PHONY : stackPour.c.obj
+
+stackPour.i: stackPour.c.i
+.PHONY : stackPour.i
+
+# target to preprocess a source file
+stackPour.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stackPour.dir\build.make CMakeFiles/stackPour.dir/stackPour.c.i
+.PHONY : stackPour.c.i
+
+stackPour.s: stackPour.c.s
+.PHONY : stackPour.s
+
+# target to generate assembly for a file
+stackPour.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stackPour.dir\build.make CMakeFiles/stackPour.dir/stackPour.c.s
+.PHONY : stackPour.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +198,13 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... linkedList
+	@echo ... stackPour
 	@echo ... linkedList.obj
 	@echo ... linkedList.i
 	@echo ... linkedList.s
+	@echo ... stackPour.obj
+	@echo ... stackPour.i
+	@echo ... stackPour.s
 .PHONY : help
 
 

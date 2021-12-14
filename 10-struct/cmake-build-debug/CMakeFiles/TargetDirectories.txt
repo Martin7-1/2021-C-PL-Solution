@@ -1,3 +1,4 @@
 D:/C-PL/2021-C-PL-Solution/10-struct/cmake-build-debug/CMakeFiles/edit_cache.dir
 D:/C-PL/2021-C-PL-Solution/10-struct/cmake-build-debug/CMakeFiles/linkedList.dir
+D:/C-PL/2021-C-PL-Solution/10-struct/cmake-build-debug/CMakeFiles/stackPour.dir
 D:/C-PL/2021-C-PL-Solution/10-struct/cmake-build-debug/CMakeFiles/rebuild_cache.dir

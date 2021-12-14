@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = D:\C-PL\2021-C-PL-Solution\10-struct\cmake-build-debug
 
 # The main recursive "all" target.
 all: CMakeFiles/linkedList.dir/all
+all: CMakeFiles/stackPour.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,6 +72,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/linkedList.dir/clean
+clean: CMakeFiles/stackPour.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -98,6 +100,32 @@ linkedList: CMakeFiles/linkedList.dir/rule
 CMakeFiles/linkedList.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/clean
 .PHONY : CMakeFiles/linkedList.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/stackPour.dir
+
+# All Build rule for target.
+CMakeFiles/stackPour.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stackPour.dir\build.make CMakeFiles/stackPour.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stackPour.dir\build.make CMakeFiles/stackPour.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C-PL\2021-C-PL-Solution\10-struct\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target stackPour"
+.PHONY : CMakeFiles/stackPour.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/stackPour.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\10-struct\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/stackPour.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\C-PL\2021-C-PL-Solution\10-struct\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/stackPour.dir/rule
+
+# Convenience name for target.
+stackPour: CMakeFiles/stackPour.dir/rule
+.PHONY : stackPour
+
+# clean rule for target.
+CMakeFiles/stackPour.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stackPour.dir\build.make CMakeFiles/stackPour.dir/clean
+.PHONY : CMakeFiles/stackPour.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

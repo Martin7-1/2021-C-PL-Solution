@@ -12,8 +12,10 @@
 
 1. 3-for-a-while
 2. 5-function
-3. 6-recursion
-3. 7-data-types
+3. 6-recursion(不全)
+3. 7-data-types(不全)
+3. 8-pointer(不全)
+3. 10-struct
 
 
 
