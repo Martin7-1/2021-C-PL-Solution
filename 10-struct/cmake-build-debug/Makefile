@@ -116,41 +116,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named 10_struct
+# Target rules for targets named linkedList
 
 # Build rule for target.
-10_struct: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 10_struct
-.PHONY : 10_struct
+linkedList: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 linkedList
+.PHONY : linkedList
 
 # fast build rule for target.
-10_struct/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\10_struct.dir\build.make CMakeFiles/10_struct.dir/build
-.PHONY : 10_struct/fast
+linkedList/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/build
+.PHONY : linkedList/fast
 
-main.obj: main.c.obj
-.PHONY : main.obj
+linkedList.obj: linkedList.c.obj
+.PHONY : linkedList.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\10_struct.dir\build.make CMakeFiles/10_struct.dir/main.c.obj
-.PHONY : main.c.obj
+linkedList.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/linkedList.c.obj
+.PHONY : linkedList.c.obj
 
-main.i: main.c.i
-.PHONY : main.i
+linkedList.i: linkedList.c.i
+.PHONY : linkedList.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\10_struct.dir\build.make CMakeFiles/10_struct.dir/main.c.i
-.PHONY : main.c.i
+linkedList.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/linkedList.c.i
+.PHONY : linkedList.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+linkedList.s: linkedList.c.s
+.PHONY : linkedList.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\10_struct.dir\build.make CMakeFiles/10_struct.dir/main.c.s
-.PHONY : main.c.s
+linkedList.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/linkedList.c.s
+.PHONY : linkedList.c.s
 
 # Help Target
 help:
@@ -160,10 +160,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... 10_struct
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... linkedList
+	@echo ... linkedList.obj
+	@echo ... linkedList.i
+	@echo ... linkedList.s
 .PHONY : help
 
 
