@@ -7,22 +7,20 @@
 typedef struct stack {
     int pointer;
     // 存放栈的值
-    int* val;
+    int val[1000006];
 }STACK;
 
 void pour(STACK* x, STACK* y);
 void output(STACK* stacks, int len);
-void freeMemory(STACK* stacks, int len);
 
 int main() {
     int stackAmount, n;
     scanf("%d %d", &stackAmount, &n);
     // 构建一个stack的数组
-    STACK* stacks = malloc((stackAmount+10) * sizeof(STACK));
+    STACK* stacks = malloc((stackAmount+1) * sizeof(STACK));
 
     for (int i = 1; i <= stackAmount; i++) {
         (stacks + i)->pointer = 0;
-        (stacks + i)->val = malloc(10000007 * sizeof(int));
         (stacks + i)->val[0] = i;
     }
 
@@ -33,7 +31,6 @@ int main() {
     }
 
     output(stacks, stackAmount);
-    freeMemory(stacks, stackAmount);
     free(stacks);
     return 0;
 }
@@ -62,12 +59,5 @@ void output(STACK* stacks, int len) {
             stacks[i].pointer = -1;
             printf("\n");
         }
-    }
-}
-
-void freeMemory(STACK* stacks, int len) {
-    // 释放内存
-    for (int i = 1; i <= len; i++) {
-        free(stacks + i);
     }
 }
